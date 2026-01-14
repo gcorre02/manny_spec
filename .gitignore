@@ -1,0 +1,17 @@
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# Python/venv (if ever used locally)
+venv/
+.env
+__pycache__/
+*.py[cod]
+
+# Run/output artifacts (none today, kept excluded)
+runs/
+state/
+
+# Archive placeholder
+archive/.gitkeep
