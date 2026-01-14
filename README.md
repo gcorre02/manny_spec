@@ -7,6 +7,7 @@ This repository is the documentation source of truth for Manny Manifolds. There 
   - `foundations.md` — irreducible principles, metrics, and non-negotiables.
   - `design_document.md` — contract, requirements, architecture, validation gates.
   - `architecture.md` — high-level system shape and tooling choices.
+  - `validation_framework.md` — hypothesis-driven validation process and report requirements.
 - `governance/` — canonical freeze and change rules
   - `canonical_freeze_v1.0.md`
 - `future/` — non-canonical ideas compatible with v1.0
