@@ -2,6 +2,8 @@
 
 Purpose: implement a falsifiable, repeatable validation process that turns Manny’s core hypotheses into executable suites and an authoritative `validation_report.json`. A green report is the definition of “Manny is functioning.”
 
+This framework is subordinate to Canonical v1.0; it operationalizes, but does not redefine, the physics or contract.
+
 Scope: this document specifies what must be implemented in code (CLI + harness + pack format + report schema + CI rule). It intentionally avoids tuning constants and domain content beyond small seed packs.
 
 ## 1) Hypotheses → Gates

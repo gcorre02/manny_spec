@@ -12,6 +12,7 @@ This repository is the documentation source of truth for Manny Manifolds. There 
   - `canonical_freeze_v1.0.md`
 - `future/` — non-canonical ideas compatible with v1.0
   - `deferred_future_work_register.md`
+  - `human_behavior_and_agi.md`
 - `archive/` — empty placeholder for retired drafts (kept out of canon).
 
 Use this repo to read, review, and evolve the design; code lives elsewhere.
