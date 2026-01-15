@@ -7,6 +7,7 @@
 - `validation/` — validation framework/process.
 - `high_level/` — north-star references (Unified Manifold PDFs and gap analysis used for v1.1).
   - `background_refs/` — supporting surveys, frictions, positioning, and exports (reference only).
+- `CANONICAL_INDEX.md` — authoritative list of canonical docs and precedence.
 
 ## Archive
 - `archive/` — prior versions and candidate materials.

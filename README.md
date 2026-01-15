@@ -9,6 +9,7 @@ This repository is the documentation source of truth for Manny Manifolds. There 
   - `architecture_v1.1.md` — system shape, modules, run-modes, motion law, ingest contract.
   - `validation/` — validation framework (hypothesis-driven validation process and report requirements).
   - `high_level/` — north-star references (Unified Manifold PDFs + gap analysis) and `background_refs/` (supporting surveys/frictions/positioning).
+  - `CANONICAL_INDEX.md` — authoritative list of canonical docs and precedence.
   - `README.md` — layout guide; archive pointers (v1.0 snapshots + candidate materials used for 1.1).
 - `governance/` — canonical freeze and change rules
   - `canonical_freeze_v1.0.md` (historical)
