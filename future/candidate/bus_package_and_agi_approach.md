@@ -88,7 +88,7 @@ Each track gets:
 
 Suggested structure:
 
-research_tracks/
+research/agi/research_tracks/
 	•	agency/
 	•	goal_formation/
 	•	world_model/

@@ -1,6 +1,6 @@
 # Manny Unified Manifold — Gap Analysis & Closure Log (v1.1)
 
-Scope: quick gap scan against the new spine (primitives → compression ladder → semantic mass → dimensions→taxonomy-as-projection) versus current canon (`foundations.md`, `design_document.md`, `architecture.md`). vII is newer than v1; this scan assumes vII principles.
+Scope: quick gap scan against the new spine (primitives → compression ladder → semantic mass → dimensions→taxonomy-as-projection) versus current canon (`foundations_v1.1.md`, `design_document_v1.1.md`, `architecture_v1.1.md`). vII is newer than v1; this scan assumes vII principles.
 
 ## Status Summary (v1.1)
 This document now serves as a closure log for gaps identified against the vII spine. Items marked **Closed in v1.1** have been explicitly addressed in `foundations_v1.1.md`, `design_document_v1.1.md`, and `architecture_v1.1.md`. Remaining items are intentionally deferred and tracked below.
@@ -37,11 +37,11 @@ All P0 gaps identified in the initial scan have been resolved in v1.1 through ex
 
 ## P1 (important, but not day-1 blockers)
 
-- **Executive/Drives absent in architecture.md** — **Closed in v1.1**
+- **Executive/Drives absent in architecture_v1.1.md** — **Closed in v1.1**
   - Foundations has it; architecture lacks the module/loop (τ, η, ζ surfaces).
   - Fix: add Executive Thermostat as a module with inputs/outputs.
 
-- **Virtual Stage missing from architecture.md** — **Closed in v1.1**
+- **Virtual Stage missing from architecture_v1.1.md** — **Closed in v1.1**
   - Design doc mentions it; architecture omits it.
   - Fix: add STAGE mode (isolated, no learning writes) with commit gate.
 
@@ -78,7 +78,7 @@ These items are intentionally deferred beyond v1.1 and do not block the MVP proo
 1) Add Primitive Contract (types + versioning + decay + promotion hooks).  
 2) Add Compression Ladder (L0–L3) + promotion thresholds + resonance/novelty gates.  
 3) Add Perception-to-Manifold Contract (no opaque blobs; artifacts are references).  
-4) Add Executive module to architecture.md (τ/η/ζ surfaces).  
+4) Add Executive module to architecture_v1.1.md (τ/η/ζ surfaces).  
 5) Add Virtual Stage stub + RunModes enforcing Observation ≠ Learning.  
 6) Add Semantic Mass metrics and wire into traversal + consolidation.
 

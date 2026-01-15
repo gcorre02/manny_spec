@@ -4,8 +4,8 @@
 > **Purpose:** Freeze the *shape* of the system and the *tooling choices* early, without locking implementation details.
 > 
 > This document complements:
-> - `foundations.md` (physics / non-negotiables)
-> - `design_document.md` (contract, gates, and drift control)
+> - `foundations_v1.1.md` (physics / non-negotiables)
+> - `design_document_v1.1.md` (contract, gates, and drift control)
 
 ---
 
@@ -233,7 +233,7 @@ These principles guide **all technology choices** to ensure Manny Manifolds can 
 
 ## 7) Next steps
 
-- Ensure `design_document.md` and this file remain consistent.
+- Ensure `design_document_v1.1.md` and this file remain consistent.
 - Implement M0 (DB + determinism + trace persistence) with the validation harness as the merge gate.
 
 ---

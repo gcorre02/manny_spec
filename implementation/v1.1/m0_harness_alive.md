@@ -14,14 +14,14 @@ Prove the validation spine exists before intelligence:
 
 This M0 checklist is a *success-criteria and deliverables* view. The implementation must conform to the project’s canonical specs:
 
-- **Foundations:** `foundations.md` (non-negotiables: geometry-first, threads, Observation ≠ Learning)
-- **Design contract:** `design_document.md` (gates, invariants, CLI/API no drift, Virtual Stage constraints)
-- **Architecture shape:** `architecture.md` (tooling choices, artifact authority, in-process default)
-- **Validation harness spec:** `validation_framework.md` (pack format, report schema, exit codes)
+- **Foundations:** `canonical/foundations_v1.1.md` (non-negotiables: geometry-first, threads, Observation ≠ Learning)
+- **Design contract:** `canonical/design_document_v1.1.md` (gates, invariants, CLI/API no drift, Virtual Stage constraints)
+- **Architecture shape:** `canonical/architecture_v1.1.md` (authority boundaries, artifact discipline, run-modes)
+- **Validation harness spec:** `canonical/validation/validation_framework.md` (pack format, report schema, exit codes)
 
 Durable learning state is authoritative only in the centralized store; run artifacts are authoritative only for replay and validation.
 
-M0 is considered correct only if the implemented code produces artifacts and reports that satisfy `validation_framework.md`.
+M0 is considered correct only if the implemented code produces artifacts and reports that satisfy `canonical/validation/validation_framework.md`.
 
 ## M0.1 Repo scaffolding (minimum)
 

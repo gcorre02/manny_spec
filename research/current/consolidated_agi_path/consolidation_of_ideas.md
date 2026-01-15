@@ -52,7 +52,7 @@ They reduce cleanly to **five ontological layers**.
 
 This is consistent across:
 
-* foundations.md (non-negotiables)
+* `canonical/foundations_v1.1.md` (non-negotiables)
 * complete documentation export
 * AGI feasibility analysis
 
@@ -121,7 +121,7 @@ Without it, everything else breaks.
 
 Documented consistently in:
 
-* foundations.md
+* `canonical/foundations_v1.1.md`
 * design laws
 * feasibility dossier
 

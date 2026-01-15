@@ -8,7 +8,8 @@ Purpose: keep historical and exploratory materials organized. These files are re
 - `conversational_layer/` — early conversational layer delegation spec (informational).
 - `architecture_legacy/` — historical implementation specs/roadmaps; obsolete for current plan but retained for history.
 - `frictions/` — lists of open puzzles/frictions (informational).
+- `current/` — active working set and consolidations (non-canonical).
 - `exports/` — document exports (reference).
-- `agi_positioning/` — positioning/analysis of Manny vs. AGI narratives (informational).
+- `agi/` — AGI positioning/analysis and safety-gated research tracks (informational).
 
 Canon lives in `canonical/`. These research files are non-binding; treat legacy items as historical only.

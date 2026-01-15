@@ -1,7 +1,7 @@
 # Manny Manifolds - Design & Drift Control (Canonical)
 > Version: v1.1
 
-> Purpose: one authoritative design document that captures the user-facing contract, success criteria, requirements, architecture, and build plan. The foundations live in `foundations.md`; this file assumes and enforces them. If anything in other docs disagrees with this one, this document wins.
+> Purpose: one authoritative design document that captures the user-facing contract, success criteria, requirements, architecture, and build plan. The foundations live in `foundations_v1.1.md`; this file assumes and enforces them. If anything in other docs disagrees with this one, this document wins.
 
 ---
 

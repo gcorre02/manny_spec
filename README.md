@@ -14,15 +14,16 @@ This repository is the documentation source of truth for Manny Manifolds. There 
 - `governance/` — canonical freeze and change rules
   - `canonical_freeze_v1.0.md` (historical)
   - `canonical_freeze_v1.1.md` (current)
-- `future/` — non-canonical ideas compatible with v1.0
+- `future/` — non-canonical ideas compatible with Canonical v1.1
   - `deferred_future_work_register.md`
   - `human_behavior_and_agi.md`
   - `reference/ai_movement_psychology/` (reference pack)
-  - `future_research_map.md` (stub tracker)
+  - `future_research_map.md` (research map / tracker)
 - `governance/BUS_PACKET/` — handoff packet (canon index, non-negotiables, MVP proof plan, risks, safe expansions)
-- `research_tracks/` — non-canonical safety-gated tracks (agency, goal formation, world model, self modification)
+- `research/` — non-canonical research, legacy material, and surveys
+  - `research/agi/research_tracks/` — safety-gated tracks (agency, goal formation, world model, self modification)
 - `CHANGELOG.md`, `CONTRIBUTORS.md`, `LICENSE` — provenance and authorship stubs
-- `archive/` — empty placeholder for retired drafts (kept out of canon).
+- `archive/` — repo-wide archive (historical, non-normative).
 - `ongoing_thoughts.md` — personal ideation notepad (lives at repo root; non-canonical).
 
 Author: Guilherme Ribeiro. Unless explicitly licensed otherwise, all rights are reserved.
