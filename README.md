@@ -11,11 +11,12 @@ This repository is the documentation source of truth for Manny Manifolds. There 
   - `high_level/` — north-star references (Unified Manifold PDFs + gap analysis) and `background_refs/` (supporting surveys/frictions/positioning).
   - `README.md` — layout guide; archive pointers (v1.0 snapshots + candidate materials used for 1.1).
 - `governance/` — canonical freeze and change rules
-  - `canonical_freeze_v1.0.md`
+  - `canonical_freeze_v1.0.md` (historical)
+  - `canonical_freeze_v1.1.md` (current)
 - `future/` — non-canonical ideas compatible with v1.0
   - `deferred_future_work_register.md`
   - `human_behavior_and_agi.md`
-  - `ai_movement_psychology/` (reference pack)
+  - `reference/ai_movement_psychology/` (reference pack)
   - `future_research_map.md` (stub tracker)
 - `governance/BUS_PACKET/` — handoff packet (canon index, non-negotiables, MVP proof plan, risks, safe expansions)
 - `research_tracks/` — non-canonical safety-gated tracks (agency, goal formation, world model, self modification)
