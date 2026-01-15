@@ -74,7 +74,7 @@ Manny Manifolds does not undergo a traditional global training phase. Learning o
 ## 4a) RunModes and Observation ≠ Learning (P0)
 - RunMode = `LEARN | OBSERVE | STAGE`.
 - `OBSERVE`: read-only; plasticity engine unreachable; artifacts/logs still produced.
-- `STAGE` (Virtual Stage): isolated curvature buffer; no writes to canonical manifold until an explicit commit gate; default is discard.
+- `STAGE` (Virtual Stage): isolated curvature buffer; no writes to canonical manifold until an explicit commit gate; default is discard. Commit requires an explicit, user-visible gate artifact; absence of a commit artifact guarantees discard.
 - All diagnostics, validation harness runs, and simulations must execute in `OBSERVE` or `STAGE`; only `LEARN` may mutate κ/motifs/lenses.
 
 ## 4b) Semantic Mass / Density Metrics (P0)
@@ -214,7 +214,7 @@ This section defines **cross-cutting implementation constraints** for core conce
 - Persistence: centralized DB (SQLite baseline, upgradeable to Postgres) for nodes, edges, kappa, motifs, lenses, interactions, traces, deltas. Ephemeral session caches for ANN index, hot node cache, memoized neighborhoods. Persisted state must be inspectable, resettable, forkable.
 - **Snapshot semantics:** save/load/fork/diff are first‑class operations used for drift control, regression testing, and domain experimentation. Forking a manifold to compare learning trajectories is expected behavior, not an edge case.
 - **Session persistence:** sessions may optionally persist query history and valence annotations to support multi‑session continuity, but must never implicitly modify durable geometry.
-- **Domain lifecycle (explicit):** domains are introduced via gated ingestion (packs/primers), evolved through interaction and validated merges, measured by gates/metrics, and remain forkable and reversible via snapshot semantics.
+- **Domain lifecycle (explicit):** domains are seeded via gated ingestion (packs/primers) but remain emergent basins (clusters), not hard boundaries; they evolve through interaction-driven traversal plus validated merges, are measured by gates/metrics, and remain forkable and reversible via snapshot semantics.
 - Repo skeleton (illustrative; adapt per language/runtime):
 ```
 mm/

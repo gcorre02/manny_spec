@@ -161,7 +161,10 @@ Lenses:
 - Emphasize dimensions
 - Emerge from repeated use
 
+
 Lenses are weightings over dimensions of constraint, not domain switches or modes.
+
+Infrastructure-level run isolation (e.g. write-barriers, simulation buffers, or staging contexts) is permitted where it enforces invariants; such mechanisms do not constitute cognitive modes.
 
 ### Non-Negotiables
 - No explicit mode flags

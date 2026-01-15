@@ -31,11 +31,13 @@
 - **Interaction Orchestrator:** coordinates one interaction; never reasons.
 - **Thread Runner:** produces a `Trace` (the only reasoning step); discrete “free-fall” law: local downhill steps in k-hop neighborhood with mild noise; stop on energy convergence/goal; always log path.
 - **Energy / Cost Evaluator:** computes the local traversal bias from κ (curvature), lens weighting, semantic mass proxy, valence channels, and novelty; used exclusively by the Thread Runner; local-only.
+- **Energy / Cost Evaluator (audit):** cost components must be recorded per step in `trace.json` (κ term, lens term, mass term, valence term, novelty term) to make `/why` a faithful replay.
+- **Energy / Cost Evaluator (determinism):** for a given state snapshot + seed + lens config, energy/cost evaluation must be deterministic.
 - **Lens Engine:** applies lens weightings over relation types/node tags/ANN bias; lenses never fork the graph.
 - **Plasticity Engine:** applies local, bounded Δκ; emits `DeltaReport`; reachable only in LEARN mode.
 - **Valence & Executive Thermostat:** computes valence (importance/novelty/affect heuristics) and regulates parameters (τ temperature, η learning gain, ζ lens friction) based on mass metrics, convergence trends, instability flags, and motif reuse stats; never routes paths or injects reasoning.
 - **Motif Miner & Reuser:** mines motifs (frequency × valence × benefit) during consolidation; reuse is explicit (reuse_count > 0) and logged in traces.
-- **Virtual Stage:** isolated run-mode for simulation; curvature writes buffered and committed only via explicit gate; default is discard.
+- **Virtual Stage:** isolated run-mode for simulation; curvature writes buffered and committed only via explicit gate; default is discard. Virtual Stage is an isolation boundary (write-buffer), not a cognitive mode; it must not change traversal rules, only write behavior.
 - Commit gate: `stage_commit.json` artifact must be produced to merge buffered curvature into the canonical manifold.
 
 ### 2.3 Offline pipeline
@@ -49,12 +51,18 @@ Input → parse → candidate nodes → spawn thread(s) → traverse locally dow
 - RunMode = `LEARN | OBSERVE | STAGE`.
 - `LEARN`: traversal + plasticity allowed.
 - `OBSERVE`: read-only traversal; plasticity engine unreachable; artifacts still written.
+- Write barrier: Plasticity Engine and any κ mutation pathways must be unreachable in OBSERVE mode by construction (not by convention).
 - `STAGE`: isolated buffer for simulation; no writes to canonical manifold unless an explicit commit gate is invoked.
 
 ### 2.6 Perception-to-Manifold (ingest contract)
 - No opaque blobs as knowledge: artifacts are references; knowledge must be manifold-native (nodes/edges/fields).
 - External encoders/LLMs may propose primitives/edges; manifold physics decides acceptance; proposals logged with provenance.
 - Ingest produces: (a) artifact reference, (b) proposed primitives/relations, (c) optional lens/dimension tags.
+
+### 2.6.1 MVP multimodal ingestion example (non-binding)
+- Image/audio ingestion uses external encoders to propose mid-level primitives (e.g. patches/keypoints/phonemes) plus candidate edges to existing concepts.
+- The raw artifact is stored as a reference with provenance; no opaque embedding blob is treated as knowledge.
+- Acceptance occurs only through standard interaction traversal + promotion rules; proposals are never authoritative.
 
 ### 2.7 Semantic mass / density
 - Region mass proxy = f(activation counts, κ distribution, valence history) over a window.
