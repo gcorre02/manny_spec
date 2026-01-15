@@ -1,1 +1,3 @@
 locality / emergent threads - like neurons firing for no reason and triggering a cascade of thought. consider how this could also be useful to avoid having to run through the whole manifold whenever a thread is run - i think this is already somewhat addressed. this is important because of the sheer size this might reach. 
+
+how can we add 'neurons fire according to weights' standards at a very low level, how can we integrate 'primitives' with that? how can we encode primitives as a collection of firing patterns? do we need to ? is it more relevant for thinking? how the thread behaves?
