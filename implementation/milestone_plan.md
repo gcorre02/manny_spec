@@ -10,45 +10,55 @@ Purpose: implement Manny in vertical slices where every milestone ends with a ru
 
 5) Each milestone must be runnable by a new developer using only the repository, the dataset packs, and the `mm validate` command (no undocumented setup or manual steps).
 
-## Milestones (M0 → M6)
+## Milestones (M0 → M7)
 
 ### M0 — Skeleton that can validate itself (harness alive)
-Goal: prove harness + artifact plumbing exist before intelligence.  
-Deliverables: stub `run_interaction(...)` writes `interaction.json`, `trace.json` (schema-valid, can be empty), `delta_kappa.json` (empty), `metrics.json`; `mm validate` runs on a tiny pack and emits `run_manifest.json`, `validation_report.json/.md`.  
+Goal: prove harness + artifact plumbing exist before intelligence.
+Deliverables: stub `run_interaction(...)` writes `interaction.json`, `trace.json` (schema-valid, can be empty), `delta_kappa.json` (empty), `metrics.json`; `mm validate` runs on a tiny pack and emits `run_manifest.json`, `validation_report.json/.md`.
 Pass: gate computation executes; deterministic output with fixed seed.
 
-### M1 — Thread runner + trace fidelity (Gate A core)
-Goal: reasoning is traversal and can replay.  
-Deliverables: minimal graph seeded (e.g., `seed_graph.json`); thread runner produces real `trace.json`; `/why` replays trace; CLI `mm run`, `mm why`.  
-Pass: `path_coverage == 1.0`; `why_fidelity == 1.0`.
+### M1 — Motion law + trace fidelity (Gate A core)
+Goal: reasoning is traversal governed by an explicit, logged cost/energy evaluator and can replay exactly.
+Deliverables: minimal graph seeded (e.g., `seed_graph.json`); thread runner produces real `trace.json` **with per-step cost components** (distance/κ/mass/lens/novelty terms as available); `/why` replays trace (no re-execution); CLI `mm run`, `mm why`.
+Pass: `path_coverage == 1.0`; `why_fidelity == 1.0` (fidelity means replay of stored motion-law inputs and step ordering, not narrative).
 
-### M2 — Persistence + snapshot/fork discipline
-Goal: state is durable, inspectable, replayable.  
-Deliverables: SQLite store with schema version; `mm state save|load|fork` (diff optional); atomic writes for state + session artifacts.  
-Pass: same input/seed/snapshot → identical trace; forked states diverge cleanly (no cross-contamination).
+### M1.5 — Primitives + compression scaffolding (representation spine)
+Goal: lock the unified manifold representation spine early so later learning/motifs/lenses are promotions, not bolt-ons.
+Deliverables: Primitive Registry (versioned primitive types); compression ladder states (L0–L4) declared in code; promotion/decay hooks exist as stubs (eligibility counters + logs), without requiring actual promotion yet. M1.5 must not mutate κ; promotion/decay hooks are observational only in this milestone.
+Pass: packs can seed primitives deterministically; promotion/decay hooks emit artifacts/logs without mutating durable geometry in OBSERVE mode.
 
-### M3 — Plasticity (Learning-as-curvature) (Gate B)
-Goal: Δκ is local, bounded, persistent, and changes traversal.  
-Deliverables: plasticity applier with local Δκ on traversed edges, clamp + per-interaction budget; populated `delta_kappa.json`; repeat tasks show task-local convergence.  
-Pass: `delta_kappa_persists == true`; local convergence meets pack threshold; κ bounds/variance stable on small runs.
+### M2 — RunModes + Virtual Stage isolation (Observation ≠ Learning in code)
+Goal: enforce write barriers so observation, diagnostics, and staging cannot mutate durable learning state.
+Deliverables: engine RunModes (`OBSERVE | LEARN | STAGE`) enforced; plasticity unreachable in OBSERVE; STAGE writes buffered and committed only via explicit gated apply; stage commit produces explicit commit artifact.
+Pass: OBSERVE pack asserts no κ mutation; STAGE pack asserts no durable mutation without explicit commit.
 
-### M4 — Motifs + explicit reuse events (Gate C)
-Goal: transfer is a logged reuse event, not overlap.  
-Deliverables: motif candidate detection (repeat traces), motif commit store, motif reuse with `reuse_count > 0` and trace segments marked as reuse; pack (e.g., apple → pear) yields reuse event.  
+### M3 — Plasticity (Learning-as-curvature) in LEARN only (Gate B)
+Goal: Δκ is local, bounded, persistent, and changes traversal; learning only possible in LEARN mode.
+Deliverables: plasticity applier with local Δκ on traversed edges, clamp + per-interaction budget; populated `delta_kappa.json`; repeat tasks show task-local / directional convergence.
+Pass: `delta_kappa_persists == true`; convergence meets pack threshold; κ bounds/variance stable on small runs.
+
+### M4 — Semantic mass proxy + executive thermostat (free-fall dynamics)
+Goal: make semantic mass/density a first-order, logged signal in traversal and regulation.
+Deliverables: mass proxy computed (activation/traffic + κ/valence summaries); cost/energy evaluator includes mass term (logged in trace); executive thermostat adjusts only {τ, η, ζ} based on stability signals (never routes). Mass proxy is heuristic v0 at this stage; validation asserts participation/logging, not perfect correctness.
+Pass: traces show mass term participation; thermostat adjustments are logged and do not alter path semantics beyond parameter changes.
+
+### M5 — Motifs as promotion (Gate C)
+Goal: motifs are L3 promotions from repeated traffic; transfer is a logged reuse event, not overlap.
+Deliverables: motif candidate detection (repeat traces + benefit); motif commit store; motif reuse with `reuse_count > 0` and trace segments marked as reuse; analogy pack (e.g., apple → pear) yields explicit reuse event and efficiency gain.
 Pass: `reuse_event_pct >= threshold`; motif latency/step gain ≥ threshold.
 
-### M5 — Consolidation + rollback (Gate D)
-Goal: offline work improves structure, is reversible.  
-Deliverables: `mm sleep` checkpoints state, prunes/normalizes, (optional) mines motifs, rebuilds indices, performs atomic swap + rollback; rollback test in harness.  
+### M6 — Consolidation + rollback (Gate D)
+Goal: offline work improves structure, remains reversible, and maintains the compression ladder (decay/promotion maintenance).
+Deliverables: `mm sleep` checkpoints state, prunes/normalizes, maintains decay/promotion bookkeeping, (optional) mines motifs, rebuilds indices, performs atomic swap + rollback; rollback test in harness.
 Pass: consolidation preserves mastered paths; rollback works; κ variance bounded under stress pack.
 
-### M6 — Service mode (optional, later)
-Goal: API server wraps engine with zero semantic drift.  
-Deliverables: FastAPI calling same engine functions; CLI still runs in-process; optional CLI client mode to hit API.  
+### M7 — Service mode (optional, later)
+Goal: API server wraps engine with zero semantic drift.
+Deliverables: FastAPI calling same core engine functions; CLI still runs in-process by default; optional CLI client mode to hit API.
 Pass: same interaction via CLI vs API → identical trace/metrics given same seed/state snapshot.
 
 ## Folder layout (implementation scope)
-- `core/` — engine modules (`engine.py`, `threading/`, `plasticity/`, `motifs/`, `lenses/`, `state/` for SQLite + migrations).
+- `core/` — engine modules (`engine.py`, `threading/`, `cost/`, `plasticity/`, `motifs/`, `lenses/`, `primitives/`, `stage/`, `executive/`, `state/` for SQLite + migrations).
 - `cli/` — thin adapter only.
 - `validation/` — harness (`mm validate`), pack loader, gate calculators, report writer.
 - `packs/` — `toy_cooking/`, `facts_updates/`, `stress_pathology/` (grow as needed).

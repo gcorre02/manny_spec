@@ -15,6 +15,8 @@ This repository is the documentation source of truth for Manny Manifolds. There 
 - `future/` — non-canonical ideas compatible with v1.0
   - `deferred_future_work_register.md`
   - `human_behavior_and_agi.md`
+  - `ai_movement_psychology/` (reference pack)
+  - `future_research_map.md` (stub tracker)
 - `archive/` — empty placeholder for retired drafts (kept out of canon).
 - `ongoing_thoughts.md` — personal ideation notepad (lives at repo root; non-canonical).
 
