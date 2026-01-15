@@ -1,6 +1,4 @@
 # Implementation docs
 
-- `milestone_plan.md` — overall M0–M6 slices.
-- `m0_harness_alive.md` — executable checklist for M0.
-- `m1_trace_fidelity.md` — executable checklist for M1.
-- `briefs/` — surface/feature briefs (e.g., conversational layer spec).
+- `v1.1/` — current milestone docs and specs. Entry index: `v1.1/INDEX.md`.
+- `briefs/` — surface/feature briefs (authoritative copy of conversational layer delegation spec).
