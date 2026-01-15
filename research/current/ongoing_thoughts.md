@@ -1,0 +1,1 @@
+locality / emergent threads - like neurons firing for no reason and triggering a cascade of thought. consider how this could also be useful to avoid having to run through the whole manifold whenever a thread is run - i think this is already somewhat addressed. this is important because of the sheer size this might reach. 
