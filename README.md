@@ -17,7 +17,12 @@ This repository is the documentation source of truth for Manny Manifolds. There 
   - `human_behavior_and_agi.md`
   - `ai_movement_psychology/` (reference pack)
   - `future_research_map.md` (stub tracker)
+- `governance/BUS_PACKET/` — handoff packet (canon index, non-negotiables, MVP proof plan, risks, safe expansions)
+- `research_tracks/` — non-canonical safety-gated tracks (agency, goal formation, world model, self modification)
+- `CHANGELOG.md`, `CONTRIBUTORS.md`, `LICENSE` — provenance and authorship stubs
 - `archive/` — empty placeholder for retired drafts (kept out of canon).
 - `ongoing_thoughts.md` — personal ideation notepad (lives at repo root; non-canonical).
+
+Author: Guilherme Ribeiro. Unless explicitly licensed otherwise, all rights are reserved.
 
 Use this repo to read, review, and evolve the design; code lives elsewhere.
