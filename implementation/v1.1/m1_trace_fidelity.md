@@ -7,10 +7,10 @@ M1 explicitly excludes learning and plasticity; all κ values are treated as rea
 
 ## M1.0 Implementation contract
 Must conform to canon:
-- `foundations.md`: threads-as-thought, no hidden planners, explanation == path.
-- `design_document.md`: Gate A (path coverage + `/why` fidelity).
-- `architecture.md`: core engine is source of truth; interfaces are transport only.
-- `validation/validation_framework.md`: pack format, artifacts, report schema.
+- `foundations_v1.1.md`: threads-as-thought, no hidden planners, explanation == path.
+- `design_document_v1.1.md`: Gate A (path coverage + `/why` fidelity).
+- `architecture_v1.1.md`: core engine is source of truth; interfaces are transport only.
+- `validation_framework.md`: pack format, artifacts, report schema.
 
 Success = `mm validate` computes and passes Gate A:
 - `path_coverage == 1.0`

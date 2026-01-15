@@ -8,6 +8,8 @@ Prove the validation spine exists before intelligence:
 - exit codes work
 - no hidden manual steps
 
+**RunMode (M0):** All M0 executions run in `OBSERVE` mode by default. Any durable state mutation (κ, edges, motifs) during M0 is a harness or engine bug.
+
 ## M0.0 Implementation contract (what guides the build)
 
 This M0 checklist is a *success-criteria and deliverables* view. The implementation must conform to the project’s canonical specs:
@@ -16,6 +18,8 @@ This M0 checklist is a *success-criteria and deliverables* view. The implementat
 - **Design contract:** `design_document.md` (gates, invariants, CLI/API no drift, Virtual Stage constraints)
 - **Architecture shape:** `architecture.md` (tooling choices, artifact authority, in-process default)
 - **Validation harness spec:** `validation_framework.md` (pack format, report schema, exit codes)
+
+Durable learning state is authoritative only in the centralized store; run artifacts are authoritative only for replay and validation.
 
 M0 is considered correct only if the implemented code produces artifacts and reports that satisfy `validation_framework.md`.
 
@@ -77,6 +81,7 @@ For M0 we accept exit code 1, but not 2.
 ## M0.3 Pack loader (deterministic)
 
 Pack format (minimal)
+- Pack loading must be deterministic and side-effect free; loading a pack must not mutate state.
 - `pack.json` includes `{name, version, description}`
 - `seed_graph.json` can be empty graph (still schema-valid)
 - `interactions.jsonl` contains at least 1 interaction
@@ -105,6 +110,8 @@ Implement a stable interface even in stub form:
 
 - `core/engine.py` exports `run_interaction(state, runtime, interaction) -> EngineResult`
 - `EngineResult` must include at minimum: `response_text`, `trace`, `delta_report`, `interaction_metrics`
+
+The engine must not compute gate outcomes, thresholds, or pass/fail status.
 
 M0 allows placeholder values, but shapes must be consistent so later milestones do not refactor signatures.
 
@@ -174,3 +181,5 @@ python -m cli.main validate --pack packs/toy_m0 --profile dev --seed 1 --state s
 …and it always produces a run folder with artifacts + reports.
 
 No manual steps. No hidden setup. No editing required.
+
+If `mm validate` exits with code `2` (harness error), M0 is not complete regardless of produced artifacts.
