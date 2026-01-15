@@ -1,3 +1,3 @@
 # Archive (repo-wide)
 
-Placeholder for deprecated or retired materials. Current canon lives under `canonical/`; use this folder for historical items only.
+Placeholder for deprecated or retired materials. Current canon lives under `canonical/`; this folder is historical and non-normative.

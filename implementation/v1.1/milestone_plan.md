@@ -11,6 +11,7 @@ Purpose: implement Manny in vertical slices where every milestone ends with a ru
 5) Each milestone must be runnable by a new developer using only the repository, the dataset packs, and the `mm validate` command (no undocumented setup or manual steps).
 
 ## Milestones (M0 → M7)
+Validation entrypoint: Gates and artifact contracts are defined in `canonical/validation/validation_framework.md`.
 
 ### M0 — Skeleton that can validate itself (harness alive)
 Goal: prove harness + artifact plumbing exist before intelligence.
