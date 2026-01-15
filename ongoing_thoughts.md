@@ -7,3 +7,6 @@
 
 could emotion be large gravity wells of meaning? 
 could could excitement be massive gravity well formed as expectation (virtual projected field) in connection and balance with the internal gravity well ? anxiety the same
+
+ 
+how about using llms for manny to engage in a 'conversation' , and just jazz from there? something that can be observable to see where the stream of consciousness goes?
