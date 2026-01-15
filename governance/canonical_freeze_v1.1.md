@@ -1,0 +1,42 @@
+# Manny Manifolds — Canonical Freeze v1.1
+
+Status: FROZEN  
+Date: 2026-01-15  
+Applies to: `canonical/foundations_v1.1.md`, `canonical/design_document_v1.1.md`, `canonical/architecture_v1.1.md`
+
+## Scope of this freeze
+The following documents together define the canonical contract of Manny Manifolds:
+- Foundations — immutable physics and invariants (with provisional primitives addendum)
+- Design — behavioral contract, gates, promotion/ingestion/run-mode rules
+- Architecture — system shape, authority boundaries, motion law, and run-mode enforcement
+
+From this point onward:
+- These documents must not drift silently.
+- Any change requires a new canonical version (e.g., v1.2, v2.0) or an explicit experimental deviation documented outside the canon.
+
+## What “canonical” means
+The canonical documents define:
+- What Manny Manifolds is and is not
+- How learning occurs (edge-backed traversal + Δκ)
+- How learning is measured (gates, metrics, reports)
+- What constitutes valid generalization (convergence/transfer/motif utility)
+- What operations are learning-neutral vs learning-active (RunModes, Virtual Stage)
+
+They intentionally do not define:
+- UI/UX details
+- Specific storage engines/providers
+- Specific model vendors
+- Performance tuning/optimizations
+
+## Non-negotiable invariants (v1.1)
+- Learning occurs only via manifold-native traversal and curvature updates; no opaque artifacts as knowledge.
+- Primitives are provisionally atomic and decomposable; promotion/decay must remain manifold-native.
+- Observation ≠ Learning: RunMode `OBSERVE/STAGE` cannot mutate κ/motifs/lenses; only `LEARN` can.
+- Reuse is an explicit event, not implicit overlap.
+- Convergence is local/directional, not global ASPL reduction.
+- Single engine of truth; derived indices (ANN/LLM) are advisory only.
+- LLM usage is bounded and scoped to non-reasoning paths; external encoders may propose, never decide traversal.
+- Executive regulates parameters only (τ, η, ζ); never routes paths.
+
+## Canonical authority
+If any implementation, experiment, or future proposal contradicts the canonical documents, the documents are authoritative.

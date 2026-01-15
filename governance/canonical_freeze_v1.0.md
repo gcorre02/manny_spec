@@ -2,7 +2,7 @@
 
 Status: FROZEN  
 Date: 2026-01-14  
-Applies to: `foundations.md`, `design_document.md`, `architecture.md`
+Applies to: `foundations.md`, `design_document.md`, `architecture.md` (superseded by v1.1; retained for history)
 
 ## Scope of this freeze
 The following documents together define the canonical contract of Manny Manifolds:
