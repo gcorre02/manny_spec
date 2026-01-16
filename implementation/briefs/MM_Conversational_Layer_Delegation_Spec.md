@@ -1,6 +1,8 @@
 # Manny Manifolds — Conversational Layer (MVP + Lateral Thinking)
 **Phase 7.5/8 Delegation Spec (High‑Level, Implementation‑Agnostic)**
 
+**Status:** Legacy reference. This spec reflects an older implementation surface and is kept for historical context. For the current runtime delegation/escalation protocol, see `canonical/high_level/runtime_protocols/conversational_layer_delegation_protocol.md` (subordinate to Canonical v1.1).
+
 > **Purpose:** Equip a dedicated implementation agent with a clear, contract‑first blueprint to deliver the **offline, hot‑swappable conversational layer** in two complementary streams — (1) a **Reflective Narrator** that explains what the manifold learned, and (2) an **Elicitor/Story‑Capture** stream that invites user stories/metaphors and stores them as structured, geometry‑ready artifacts for later reprocessing. The design is **agnostic to the underlying model/tooling**, aligns with MM’s scientific goals (learning‑as‑curvature, transfer, explainability), and plugs into existing project surfaces without changing core learning physics.
 
 - **Alignment with Vision & Design Laws:** Conversational outputs are built from/into the geometry (paths, Δκ, motifs, lenses) with **provenance and determinism**; they remain **offline**, preserving MM’s locality, stability, and dual‑dynamics principles.
