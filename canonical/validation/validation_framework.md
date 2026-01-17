@@ -4,7 +4,7 @@ Purpose: implement a falsifiable, repeatable validation process that turns Manny
 
 This framework is subordinate to Canonical v1.1; it operationalizes, but does not redefine, the physics or contract. Validation harness and packs are executed in `implementation/v1.1/` (see milestone docs and packs referenced there).
 
-Scope: this document specifies what must be implemented in code (CLI + harness + pack format + report schema + CI rule). It intentionally avoids tuning constants and domain content beyond small seed packs.
+Scope: this document specifies what must be implemented in code (CLI + harness + pack format + report schema + CI rule). It intentionally avoids tuning constants and domain content beyond small seed packs. Scale is governed by the Scale Tier Plan; all packs default to Tier 0 unless explicitly promoted (see `scale_tier_plan.md`).
 
 ## 1) Hypotheses → Gates
 - H1 Learning exists: Δκ changes persist and matter.
@@ -98,7 +98,7 @@ A dataset pack is a folder with versioned, deterministic inputs.
 **Pack authoring note:** Dataset packs are intentionally small, explicit, and human-auditable. They are hypotheses about learning behavior, not benchmarks. Packs should prefer clarity and falsifiability over realism or scale.
 
 Required files:
-- `pack.json` (metadata: name, version, description)
+- `pack.json` (metadata: name, version, description, optional `tier`: `tier0` is the default if missing)
 - `seed_graph.json` (nodes/edges/primers sufficient to start)
 - `interactions.jsonl` (scripted interaction sequence)
 - `assertions.json` (gate thresholds and expected events)
@@ -278,7 +278,7 @@ Must ship:
    - `packs/facts_updates` (contradiction/correction persistence)
    - `packs/stress_pathology` (noise + conflicting valence + consolidation)
 3. Deterministic run artifacts and `validation_report.json` schema.
-4. CI rule: merges are blocked unless `mm validate` returns exit code 0 and the report is attached.
+4. CI rule: merges are blocked unless `mm validate` returns exit code 0 and the report is attached. Tier policy: Tier 0 packs run on PR; Tier 1 packs run on PRs touching motifs/consolidation or on nightly; Tier 2+ run nightly/manual as declared in `scale_tier_plan.md`.
 
 Optional (later):
 - HTML dashboard renderer for reports
