@@ -39,6 +39,20 @@ That is excellent for:
 
 ⸻
 
+What Jazz is NOT
+
+To prevent future confusion (or misuse), Jazz is explicitly:
+	•	Not evaluation
+	•	Not reward learning
+	•	Not prompt-engineering
+	•	Not supervised training
+
+Jazz is observation and exploration, not optimization or instruction.
+
+**Critical constraint:** Jazz sessions are observational by default (OBSERVE mode) and must not introduce durable learning unless explicitly staged or committed.
+
+⸻
+
 The safe architecture for this (important)
 
 Here’s the only way this should be done.

@@ -259,6 +259,15 @@ They:
 
 Jazz Sessions are how you listen to Manny.
 
+**Important:** Jazz Sessions are an ingestion pattern, not a new execution mode. They obey all RunMode constraints and never bypass traversal, trace logging, or write barriers.
+
+**Constraints:**
+- No new Jazz cognition mode; Jazz uses standard traversal and RunModes
+- Do not let Jazz implicitly flip to LEARN; OBSERVE is the default
+- Narration must stay trace-grounded; responses derive from traces, not independent generation
+
+This prevents future readers from thinking Jazz is "special logic."
+
 ## 11. Scaling & Size Management
 
 Scalability relies on:
