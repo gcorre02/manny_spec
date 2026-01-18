@@ -6,11 +6,15 @@ This framework is subordinate to Canonical v1.1; it operationalizes, but does no
 
 Scope: this document specifies what must be implemented in code (CLI + harness + pack format + report schema + CI rule). It intentionally avoids tuning constants and domain content beyond small seed packs. Scale is governed by the Scale Tier Plan; all packs default to Tier 0 unless explicitly promoted (see `scale_tier_plan.md`).
 
+## Manny MVP Freeze (Reference)
+
+Manny MVP is frozen at the completion of M6. Gates A–C are fully evaluated and passing, and Gate D.a (atomic consolidation and exact rollback) is proven. Gate D.b (maintenance behavior quality over repeated cycles) is intentionally deferred as post‑MVP evaluation. This validation framework defines how MVP guarantees are proven and how post‑MVP behavior is observed without redefining core guarantees.
+
 ## 1) Hypotheses → Gates
 - H1 Learning exists: Δκ changes persist and matter.
 - H2 Reasoning is path-based: every answer has a trace; `/why` is faithful.
 - H3 Transfer exists: explicit reuse events on analogies yield efficiency.
-- H4 Stability: κ stays bounded; consolidation doesn’t erase mastery.
+- H4 Stability: κ stays bounded; consolidation doesn’t erase mastery. Gate D.a is required for MVP; Gate D.b (maintenance behavior quality over repeated cycles) is deferred post-MVP.
 - H5 LLM is a lens: runtime reasoning remains manifold-driven (LLM usage bounded).
 
 ## 2) What is automated vs manual
@@ -230,7 +234,44 @@ Example:
 }
 ```
 
-### 3.6 Gate computation (must be automated)
+-### 3.6 Gate computation (must be automated)
+- 
+-## Gate D.b — Maintenance Behavior (Post‑MVP, Deferred)
+-
+-Gate D.b evaluates **maintenance behavior quality over time**, not safety. It is explicitly **post‑MVP** and is not required for MVP correctness.
+-
+-Where Gate D.a proves that consolidation is **safe, atomic, and reversible**, Gate D.b asks whether maintenance operations behave *well* under repeated application.
+-
+-### What Gate D.b evaluates
+-Gate D.b assesses outcomes across **multi‑cycle sleep runs**, including:
+- - Preservation of learned mastery (previously reused motifs remain reusable)
+- - Bounded κ behavior across repeated consolidation
+- - Selective pruning of low‑signal structure without erasing signal
+- - Absence of cumulative drift under repeated sleep cycles
+-
+-### How Gate D.b is evaluated
+-Gate D.b is evaluated via **explicit multi‑cycle packs** that:
+-1. Start from a learned state (κ + motifs present)
+-2. Apply `sleep` repeatedly (N cycles, no new learning)
+-3. Measure invariants and distributions after each cycle
+-4. Optionally roll back to confirm reversibility remains intact
+-
+-Gate D.b packs are observational and diagnostic. They do not introduce new learning semantics.
+-
+-### What Gate D.b does *not* require
+- - No hard thresholds initially
+- - No PR‑blocking enforcement
+- - No continuous runtime system
+- - No claims of optimal maintenance behavior
+-
+-### Execution policy
+- - Gate D.b packs are run manually or nightly
+- - They are never PR‑blocking by default
+- - Failures inform maintenance tuning, not correctness
+-
+-### Relationship to MVP
+-Gate D.b depends on richer manifolds and repeated maintenance cycles and is therefore **intentionally deferred**. MVP completion requires Gate D.a only.
+-
 - Gate A (Foundations):
   - `path_coverage == 1.0`
   - `why_fidelity == 1.0`

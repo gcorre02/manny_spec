@@ -4,6 +4,7 @@ Status: FROZEN
 Date: 2026-01-15  
 Applies to: `canonical/foundations_v1.1.md`, `canonical/design_document_v1.1.md`, `canonical/architecture_v1.1.md`
 
+
 ## Scope of this freeze
 The following documents together define the canonical contract of Manny Manifolds:
 - Foundations — immutable physics and invariants (with provisional primitives addendum)
@@ -13,6 +14,10 @@ The following documents together define the canonical contract of Manny Manifold
 From this point onward:
 - These documents must not drift silently.
 - Any change requires a new canonical version (e.g., v1.2, v2.0) or an explicit experimental deviation documented outside the canon.
+
+## Manny MVP Freeze (M6)
+
+Manny MVP is frozen at the completion of **M6 (Consolidation & Rollback)**. At this point, **Gates A–C** are fully evaluated and passing, and **Gate D.a** (offline consolidation with atomic swap and exact rollback) is proven. Reasoning is path-based and replayable (Gate A), learning is explicit, persistent, and bounded (Gate B), transfer via runtime reuse is real, selective, and falsifiable (Gate C), and maintenance operations are auditable and exactly reversible (Gate D.a). **Gate D.b** (maintenance behavior quality over repeated cycles) is intentionally deferred as post-MVP evaluation and does not block MVP completeness. All future work extends capability, scale, or optimization without redefining the core guarantees frozen here.
 
 ## What “canonical” means
 The canonical documents define:
