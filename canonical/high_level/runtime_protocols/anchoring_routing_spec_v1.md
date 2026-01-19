@@ -97,6 +97,7 @@ No other sources are permitted.
 4.1.a Fallback Anchors
 
 Fallback anchors (e.g., domain hubs) are permitted when no artifact-derived anchors can be resolved. Fallback usage must be explicitly logged as such and must not be interpreted as semantic importance or preference.
+Fallback goal behavior is policy-defined and may vary by protocol (e.g., Jazz vs batch validation), provided determinism and auditability are preserved.
 
 ⸻
 
@@ -131,6 +132,28 @@ All directionality must emerge from existing manifold physics.
 
 ⸻
 
+## 5.a Goal Selection Modes (Routing-Adjacent, Non-Semantic)
+
+Anchoring may optionally specify how traversal termination is determined. Goal selection affects *when traversal stops*, not *how traversal moves*.
+
+Permitted goal modes:
+
+• **Goal-directed**
+  - Anchoring specifies one or more `goal_nodes`.
+  - Traversal terminates when a goal is reached or budget is exhausted.
+  - Goal choice must be artifact-derived, deterministic, and logged.
+
+• **Exploratory (Wander)**
+  - No goal nodes are specified.
+  - Traversal proceeds for a fixed, deterministic step budget.
+  - Termination reason is `budget_exhausted`.
+
+Goal mode must be explicitly recorded per interaction. Goal selection must not introduce semantic inference or traversal bias beyond termination conditions.
+
+Goal selection mode and lens activation are orthogonal; either may be enabled independently, provided all constraints in this specification are satisfied.
+
+⸻
+
 6. Determinism & Auditability
 
 Anchoring must obey:
@@ -162,6 +185,20 @@ Topology influences traversal, not anchoring.
 Clarification:
 Topology-awareness permits recognizing where anchors land.
 Topology-privilege (biasing entry toward hubs, novelty, or density) is explicitly forbidden.
+
+⸻
+
+## 7.a Directional Field Lens (Routing-Adjacent Influence)
+
+The system may apply a *directional field lens* to traversal as a temporary, explicit influence on motion. A directional field lens biases movement toward or away from a specified target set without selecting paths or introducing new physics.
+
+Constraints:
+• Directional fields must be explicit, deterministic, and session-scoped.
+• Directional fields must not modify κ, edges, or durable state.
+• Directional fields act only by reweighting existing traversal cost components.
+• Directional fields must be fully logged per interaction.
+
+Directional fields are considered *lenses*, not routing decisions. They influence traversal after anchoring but do not affect anchor selection.
 
 ⸻
 
@@ -224,6 +261,7 @@ Authority Boundaries
 	•	May authorize:
 	•	multi-anchor attempts
 	•	anchoring broadening policies
+	•	May authorize activation of directional field lenses or exploratory goal modes when explicitly requested or policy-permitted.
 	•	May NOT:
 	•	choose specific anchor targets
 	•	inject routing intent
@@ -257,6 +295,14 @@ Any such event requires immediate halt and review.
 
 ⸻
 
+## Relationship to Lens Specification
+
+This document defines where and how anchoring and routing interact with traversal. A complete taxonomy of lenses (novelty, directional, contextual, etc.) and their mathematical treatment is defined in a separate **Lens Specification** document.
+
+Anchoring and routing must remain independent of lens implementation details. Lenses may influence motion but must not alter anchoring rules.
+
+⸻
+
 Closing Statement
 
 Routing is the act of asking the manifold a question.
@@ -266,7 +312,7 @@ This specification ensures Manny asks questions without smuggling answers, prese
 
 ⸻
 
-Appendix A — Minimal Routing Algorithm Sketch (Non-binding)
+## Appendix A — Minimal Routing Algorithm Sketch (Non-binding)
 
 This appendix provides a minimal, illustrative routing algorithm sketch that conforms to the Routing & Anchoring Specification v0. It is intended as a reasoning aid, not a prescriptive implementation.
 
@@ -287,6 +333,7 @@ A.2 Anchor Derivation
    - no semantic inference permitted
 3. Apply snapshot + seed determinism:
    - deterministic ordering and selection
+- If multiple valid anchors exist, routing must emit a multi-anchor set rather than selecting by semantic preference.
 
 Output: Anchor set A = {a1, a2, ...}
 
@@ -307,7 +354,7 @@ Notes:
 - Multi-anchor traversal is parallel, not prioritized
 - All behavior beyond this point is governed by manifold physics
 
-Appendix B — Routing Conformance Tests
+## Appendix B — Routing Conformance Tests
 
 The following tests define whether a routing implementation conforms to the Routing & Anchoring Specification v0.
 
@@ -339,9 +386,8 @@ B.3 No Bias Injection Test
 B.4 Mode Invariance Test
 - Given the same experience in OBSERVE, LEARN, and STAGE modes
 - Then:
-  - anchor selection and traversal path must be identical
-- Fail if:
-  - routing behavior differs across modes
+  - anchor selection and traversal behavior must be identical up to trace termination given the same snapshot and seed
+- Note: plasticity effects are mode-dependent but may occur only after trace completion.
 
 B.5 Hub/Periphery Neutrality Test
 - Given artifacts mapping to both hub and peripheral nodes
@@ -372,3 +418,5 @@ B.8 Logging Completeness Test
   - seed and snapshot must be recorded
 - Fail if:
   - replay cannot reconstruct routing conditions
+
+These conformance tests should be implemented as automated checks against trace artifacts (trace.json) and snapshot replay.

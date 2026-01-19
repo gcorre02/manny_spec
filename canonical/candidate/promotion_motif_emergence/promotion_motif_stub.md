@@ -1,0 +1,1 @@
+Promotion & Motif Emergence Spec (how higher-order structure is allowed to stabilize)
