@@ -1,5 +1,3 @@
-
-
 # Gravity & Emergence — Placeholder Specification (v0)
 
 **Status:** Canon-adjacent placeholder (non-binding)  
@@ -32,6 +30,8 @@ Gravity is:
 - descriptive, not directive
 - emergent, not configured
 - a consequence of compression, not a force applied externally
+
+Gravity may eventually be expressed through signed potential effects or metric deformation, but only after stable curvature has emerged through learning. Gravity must not be approximated via additive cost penalties or lens escalation.
 
 ### Emergence
 
@@ -72,6 +72,8 @@ Lenses are **not** gravity.
 - simulate gravity through weight escalation
 
 Any lens that behaves like gravity violates this spec.
+
+Resistance terms (e.g., mass or friction penalties) oppose motion locally; gravity describes global attraction that emerges from shaped geometry and must not be simulated by such penalties.
 
 ---
 
