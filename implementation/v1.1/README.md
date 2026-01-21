@@ -7,6 +7,6 @@ Key docs:
 - `archive/` (legacy refs)
 
 Training track / protocols:
-- Canonical training track: `canonical/high_level/runtime_protocols/training_track_v1.1.md`.
-- Runtime protocol: `canonical/high_level/runtime_protocols/jazz_protocol.md`.
+- Canonical training track: `canonical/high_level/runtime_protocols/lifecycle/training_track_v1.1.md`.
+- Runtime protocol: `canonical/high_level/runtime_protocols/observability/jazz_protocol.md`.
 - See `canonical/high_level/README.md` for other supporting references.

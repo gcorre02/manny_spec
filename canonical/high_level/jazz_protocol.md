@@ -1,1 +1,1 @@
-Moved: see `runtime_protocols/jazz_protocol.md`.
+Moved: see `runtime_protocols/observability/jazz_protocol.md`.

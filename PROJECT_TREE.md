@@ -17,16 +17,20 @@ Design_Folder/
 │   │
 │   ├── high_level/                    # North-star references (supporting)
 │   │   ├── unified_manifold/          # Unified manifold PDFs + gap analysis
-│   │   ├── runtime_protocols/         # Runtime protocol specs
-│   │   │   ├── anchoring_routing_spec_v1.md
-│   │   │   ├── jazz_protocol.md
-│   │   │   ├── conversational_layer_delegation_protocol.md
-│   │   │   └── training_track_v1.1.md
+│   │   ├── runtime_protocols/         # Runtime protocol specs (organized by category)
+│   │   │   ├── physics_entry/
+│   │   │   │   └── anchoring_routing_spec_v1.md
+│   │   │   ├── observability/
+│   │   │   │   └── jazz_protocol.md
+│   │   │   ├── interfaces/
+│   │   │   │   └── conversational_layer_delegation_protocol.md
+│   │   │   └── lifecycle/
+│   │   │       └── training_track_v1.1.md
 │   │   ├── background_refs/           # Reference-only materials
 │   │   └── training_track_v1.1.md
 │   │
 │   ├── candidate/                     # Candidate specifications (non-canonical)
-│   │   ├── physics_suite_v1.1_spec_index.md  # Physics suite index & conformance checklist
+│   │   ├── physics_candidate_index_v1.1.md  # Physics candidate index & conformance checklist
 │   │   ├── gravity/
 │   │   │   └── gravity_emergence_spec.md
 │   │   ├── lenses/
@@ -38,7 +42,8 @@ Design_Folder/
 │   │   ├── traversal/
 │   │   │   └── traversal_stub.md
 │   │   ├── jazz/
-│   │   │   └── jazz_narration_spec_v1_1
+│   │   │   ├── README.md
+│   │   │   └── jazz_narration_spec_v1_1.md
 │   │   └── training/
 │   │       └── README.md
 │   │

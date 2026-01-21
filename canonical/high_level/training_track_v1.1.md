@@ -1,1 +1,1 @@
-Moved: see `runtime_protocols/training_track_v1.1.md`.
+Moved: see `runtime_protocols/lifecycle/training_track_v1.1.md`.

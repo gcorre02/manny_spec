@@ -102,7 +102,7 @@ Rule: exporting a session must be observation-only. Converting a session into a 
 
 ## 6. Narrated Manny Responses (Definition)
 
-> **Detailed specification:** See `canonical/candidate/jazz/jazz_narration_spec_v1_1` for comprehensive narration constraints and invariants.
+> **Detailed specification:** See `canonical/candidate/jazz/jazz_narration_spec_v1_1.md` for comprehensive narration constraints and invariants.
 
 A *narrated response* is **not free text generation**. It is a constrained rendering of Manny’s chosen trace.
 
