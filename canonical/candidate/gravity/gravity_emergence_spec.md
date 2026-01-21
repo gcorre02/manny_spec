@@ -41,6 +41,93 @@ Emergence is detected, not declared.
 
 ---
 
+## 2.a What Would Count as Gravity (Pre-Existence Criteria)
+
+This section defines **what would count as gravity in Manny before it exists**, in strictly empirical and falsifiable terms. It introduces no mechanics and authorizes no implementation.
+
+### Core Definition
+
+Gravity exists in Manny **if and only if** regions of the manifold exhibit **persistent, lens-independent, path-level attraction** that arises solely from accumulated curvature and compression, and cannot be explained by anchoring, lenses, stochasticity, or traversal heuristics.
+
+Gravity is an *observed property* of motion, not a control signal.
+
+---
+
+### Necessary Conditions (All Must Hold)
+
+1. **Lens Independence**  
+   Attraction persists when all lenses (novelty, directional fields, etc.) are disabled.
+   
+   If attraction disappears when lenses are removed, the effect is not gravity.
+
+2. **Anchor Independence**  
+   Traversal from multiple, diverse anchors (including peripheral and unrelated regions) converges disproportionately toward the same region.
+   
+   If convergence depends on privileged anchors, routing bias is present, not gravity.
+
+3. **Path-Level Behavior**  
+   Attraction manifests as gradual bending of full trajectories and reduced resistance across many routes.
+   
+   Direct jumps, special edges, or teleportation effects do not qualify.
+
+4. **Persistence Under Perturbation**  
+   The effect survives seed variation, mild traversal noise, and small topology perturbations.
+   
+   If the effect collapses under minor perturbation, it is not gravity.
+
+5. **Cost-Based, Not Rule-Based**  
+   Attraction is fully explainable in terms of cumulative traversal cost and escape energy.
+   
+   If the system can state a rule or objective for preferring the region, gravity has been replaced by planning.
+
+6. **Earned Through Experience**  
+   Attraction emerges only after repeated traversal, motif consolidation, and κ accumulation.
+   
+   If the effect appears in a fresh or untrained manifold, it is not gravity.
+
+---
+
+### Sufficient Signals (Joint Evidence)
+
+Gravity is credibly present only if **all** of the following are observed simultaneously:
+
+- High basin capture rate from diverse anchors
+- Effective distance compression without new edges
+- Elevated escape energy from the region
+- Motif-mediated metric bending across multiple paths
+- Lens independence confirmed via controlled removal
+
+Any subset of these signals is suggestive but insufficient.
+
+---
+
+### Explicit Non-Examples (Do Not Qualify)
+
+The following must **not** be interpreted as gravity:
+
+- Directional fields or novelty suppression that feel attractive
+- Frequently anchored hubs
+- Single-path shortcuts or isolated motifs
+- Lens-dependent convergence
+- Regions preferred only under specific contexts
+
+These are pre-gravitational or extrinsic effects.
+
+---
+
+### Interpretive Constraint
+
+Gravity may be **reported**, **measured**, and **visualized** only through post-hoc analysis of artifacts and traces.
+
+Gravity must never be:
+- used to select destinations
+- used to bias traversal
+- used to authorize learning
+
+Observation precedes permission.
+
+---
+
 ## 3. What Gravity Is NOT
 
 Gravity must **never** be implemented as:
