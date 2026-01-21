@@ -28,6 +28,8 @@ All diagnostic signals must be:
 - Traceable to artifact sources
 - Independent of specific content domains
 
+All required signals must be demonstrated *prior* to any intrinsic gravity mechanism being implemented. Diagnostic presence authorizes *discussion* of gravity, not implementation.
+
 ⸻
 
 ## Required Negative Controls
@@ -43,6 +45,7 @@ Required negative controls:
 - **Lens isolation** — gravity effects present without lens activation
 - **Traversal independence** — gravity effects not explained by traversal heuristics
 - **Learning independence** — gravity effects present in OBSERVE mode
+- **Anchor invariance** — gravity effects must persist under different anchoring strategies (goal-directed, wander, fallback), holding other conditions constant.
 
 ⸻
 
@@ -78,6 +81,7 @@ Gravity promotion is **forbidden** if any of the following are true:
 6. **Non-reproducible** — if gravity cannot be reproduced with same conditions
 7. **Lens-dependent** — if gravity disappears when lenses are disabled
 8. **Learning-dependent** — if gravity only appears during learning windows
+9. **Early parameterization** — if gravity can be tuned, weighted, or switched on/off via a parameter rather than observed as an effect, promotion is forbidden.
 
 **If any disqualifier is true, do not promote.**
 
@@ -92,6 +96,7 @@ If all requirements are met and no disqualifiers apply:
 3. **Governance review** — explicit approval via governance process
 4. **Version increment** — promotion requires new canonical version (e.g., v1.2)
 5. **Documentation update** — update foundations/design/architecture as needed
+6. **Public record** — record the promotion decision, evidence dossier, and dissenting opinions (if any) in governance logs.
 
 Promotion is **not automatic** even if all checkboxes pass. It requires explicit governance decision.
 
@@ -99,7 +104,7 @@ Promotion is **not automatic** even if all checkboxes pass. It requires explicit
 
 ## Relationship to Other Documents
 
-This checklist depends on:
+This checklist depends *normatively* on:
 - `canonical/validation/emergence_diagnostics_v0.md` — defines what to measure
 - `canonical/validation/diagnostic_dashboard_spec_v0.md` — defines how to observe
 - `canonical/candidate/training/experiential_learning_curriculum_v0.md` — defines learning conditions

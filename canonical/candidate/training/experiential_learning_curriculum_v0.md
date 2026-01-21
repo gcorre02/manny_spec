@@ -13,6 +13,19 @@ Learning occurs through controlled experience under observable conditions. We ca
 
 ⸻
 
+## Authority & Dependencies
+
+This document defines a **candidate learning protocol** and does not authorize implementation by itself.
+
+It depends on, and must not redefine:
+- `emergence_diagnostics_v0.md` (authoritative measurement vocabulary)
+- `diagnostic_dashboard_spec_v0.md` (permitted observation surfaces)
+- Canonical Foundations, Design, and Architecture v1.1
+
+Any learning curriculum that conflicts with these documents is invalid.
+
+⸻
+
 ## Preconditions
 
 Before any learning curriculum may be applied:
@@ -30,6 +43,10 @@ Before any learning curriculum may be applied:
    - OBSERVE/LEARN/STAGE boundaries must be enforced
    - Write barriers must be verified
 
+4. **Baseline reproducibility must be demonstrated**
+   - At least one no-learning (OBSERVE-only) run must be replayed successfully
+   - Diagnostics must be stable across identical seeds and conditions
+
 ⸻
 
 ## Learning Window Definition
@@ -41,6 +58,18 @@ A learning window defines:
 - **Scope** — which interactions/domains are included
 
 Learning windows are **bounded experiments**, not open-ended training.
+
+⸻
+
+## Learning Window Invariants
+
+During a learning window:
+- Anchoring and routing semantics must remain unchanged
+- Lenses may be applied only if explicitly logged and disabled in control runs
+- No new cost terms may be introduced
+- Learning must be local and incremental; no global recomputation
+
+Any violation invalidates the experiment.
 
 ⸻
 
@@ -76,19 +105,18 @@ This curriculum must be falsifiable. Expected outcomes:
 - **If learning occurred:** measurable κ changes, path length reduction, motif emergence
 - **If learning did not occur:** no κ changes, no path improvements, no structural emergence
 - **If measurement is corrupted:** inconsistent diagnostics, non-reproducible results
+- **If apparent learning is lens-dependent:** results are invalid
+- **If learning disappears when replayed:** results are invalid
 
 The curriculum must be able to **fail** and still be valid.
 
 ⸻
 
-## Forbidden Practices
+## Diagnostic Referencing Rule
 
-This curriculum explicitly forbids:
-- **Optimization loops** — no feedback from metrics to learning parameters
-- **Goal-directed learning** — no learning toward predefined objectives
-- **Batch training** — no global optimization passes
-- **Hidden learning** — no learning outside the defined window
-- **Premature promotion** — no declaring success before falsification
+All claims of learning, improvement, or structural change must reference specific diagnostics by name as defined in `emergence_diagnostics_v0.md`.
+
+Narrative descriptions without diagnostic grounding are not admissible evidence.
 
 ⸻
 
@@ -104,6 +132,16 @@ If gravity appears during a learning experiment, it must appear under these cond
 This curriculum enables the statement:
 
 > "If gravity appears, it appeared under these conditions."
+
+⸻
+
+## Relationship to Other Candidate Specifications
+
+- Gravity & Emergence Specification — defines how gravity may be discussed
+- Promotion & Motif Emergence Stub — defines how motifs may be promoted
+- Jazz Protocol — defines observational surfaces prior to learning
+
+This curriculum does not override any of the above.
 
 ⸻
 

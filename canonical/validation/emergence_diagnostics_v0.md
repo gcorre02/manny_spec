@@ -5,6 +5,20 @@
 
 This spec defines **diagnostics only**. It introduces no mechanics, no learning, and no traversal changes. It exists to ensure that any future claims of emergence, meaning, or gravity are **empirically grounded**.
 
+## Authority & Dependencies
+
+This document defines the **authoritative vocabulary** for observing emergent structure in Manny.
+
+All future references to "basins", "attractors", "structure", or "gravity" must cite one or more diagnostics defined here.
+
+This specification is referenced by:
+- Gravity & Emergence Specification (candidate)
+- Diagnostic Dashboard Specification
+- Experiential Learning Curriculum (candidate)
+- Gravity Promotion Checklist (governance)
+
+No other document may redefine emergence signals independently.
+
 ---
 
 ## 1. Core Principle
@@ -29,6 +43,12 @@ Diagnostics must not:
 - alter κ
 - introduce lenses
 - introduce learning
+
+### Sequencing Constraint
+
+Emergence diagnostics must be recorded and reviewed **prior to enabling any autonomous learning, intrinsic gravity, or motif promotion beyond staging**.
+
+Once learning is enabled, baseline diagnostic conditions cannot be reconstructed. Diagnostics therefore serve as the required "before" snapshot for all future promotion decisions.
 
 ---
 
@@ -249,6 +269,14 @@ Diagnostics must not:
 
 Observation precedes permission.
 
+### Diagnostic vs Claim Boundary
+
+Diagnostics indicate *pressure toward* structure, not the existence of structure itself.
+
+No single diagnostic, nor any combination of diagnostics, is sufficient to declare meaning, gravity, or semantic coherence.
+
+All declarations of emergence or promotion decisions are governed separately.
+
 ---
 
 ## 12. Promotion Gate (Future Use)
@@ -259,6 +287,14 @@ This spec may be used as a **precondition** for:
 - enabling motif promotion
 
 No such feature may proceed without positive diagnostic evidence.
+
+---
+
+## Related Specifications
+
+- `diagnostic_dashboard_spec_v0.md` — defines how diagnostics may be visualized
+- `gravity_emergence_spec.md` — constrains how gravity may be discussed
+- `gravity_promotion_checklist_v0.md` — defines when gravity may be acknowledged
 
 ---
 

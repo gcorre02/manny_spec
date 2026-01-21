@@ -19,6 +19,17 @@ Dashboards may **not** consume:
 - Internal engine state not captured in artifacts
 - LLM hidden state or intermediate representations
 
+## Required Provenance
+
+Every chart/table must display (or embed in metadata):
+- `spec_pin` (from `SPEC_VERSION.md` where applicable)
+- `run_id` (and `pack` if present)
+- `state_hash_before` / `state_hash_after` (when available)
+- source artifact paths (e.g., `runs/<run_id>/interactions/*/trace.json`)
+- dashboard logic version/hash (so outputs are reproducible)
+
+If any provenance element is missing, the dashboard may still render, but must show `provenance_incomplete=true` in its metadata.
+
 ⸻
 
 ## Allowed Aggregations
@@ -29,6 +40,7 @@ Dashboards may compute and display:
 - **Heatmaps** — activation patterns, basin revisitation, frontier expansion
 - **Time series** — evolution of metrics over runs/sessions
 - **Comparisons** — before/after snapshots, A/B run comparisons
+- **Derivations** — deterministic computed metrics from artifacts (e.g., `goal_reached_pct`, `termination_reason_counts`, `distinct_region_visits`) provided each derivation is documented and traceable.
 
 All aggregations must be:
 - Computable from artifacts alone
@@ -46,8 +58,19 @@ Dashboards must **not**:
 - **Recommend changes** — no suggestions for parameter adjustments
 - **Override RunModes** — no dashboard-initiated mode switches
 - **Inject feedback** — no dashboard signals feeding back into learning
+- **Rank or score runs** — no ordering, rating, or scalar "quality" measures comparing runs, sessions, or configurations.
 
 Dashboards are **read-only observation surfaces**.
+
+## Allowed Outputs
+
+Dashboards may output:
+- static images (PNG/SVG)
+- HTML reports
+- JSON bundles (data + provenance) used to render charts
+- Markdown summaries
+
+All outputs must be written to a **separate output directory** (never into `runs/`), and must never modify or delete run artifacts.
 
 ⸻
 
@@ -59,6 +82,8 @@ This dashboard spec operationalizes the observation layer referenced in `emergen
 - This dashboard spec defines **how to look** (and how not to act)
 
 Together, they ensure emergence is detected, not declared.
+
+This dashboard spec also supports the Experiential Learning Curriculum (candidate). Dashboards may be used to visualize baseline and post-learning diagnostics, but must not be used to decide whether learning should occur or whether learning was successful. All such decisions are governed by the curriculum and promotion checklists, not dashboards.
 
 ⸻
 
@@ -83,6 +108,13 @@ Dashboard outputs must be:
 - **Auditable** — dashboard code/logic must be inspectable
 - **Non-mutating** — dashboard generation must not alter artifacts or state
 
+## Change Control (Stability)
+
+Because dashboards define the observation surface, changes must be slow and explicit:
+- Any change to aggregation definitions or chart semantics requires a version bump (e.g., `dashboard_spec_version=v0.1 → v0.2`).
+- Experiments must record the dashboard spec version used.
+- Do not backfill new aggregations into historical dashboards unless clearly marked as “computed later”.
+
 ⸻
 
 ## Stability Requirement
@@ -92,3 +124,18 @@ This spec must be stable before learning begins. Dashboard boundaries must not s
 ⸻
 
 > **Principle:** A dashboard that cannot influence behavior cannot corrupt measurement.
+
+⸻
+
+## Appendix — Example Observational Panels (Non-Normative)
+
+These examples illustrate permitted panels; they must remain read-only.
+
+- **Run overview:** interactions count, mode, state hashes, pack name, spec pin.
+- **Trace distribution:** histogram of step counts; termination reason counts.
+- **Cost composition:** stacked distribution of cost components (distance, kappa_term, mass_term, field_term, novelty_term, friction_term, penalty_term).
+- **Reuse distribution:** motif reuse events by motif_id; reuse_event_pct over time.
+- **Region exploration:** distinct `meta.region` visits per session; region transition counts.
+- **Rollback proof view:** checkpoint hash vs rollback hash equality and row-set equality result flags.
+
+Panels must not include pass/fail labels; interpretation belongs to packs and gates, not the dashboard.
