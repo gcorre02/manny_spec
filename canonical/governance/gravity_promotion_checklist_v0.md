@@ -27,6 +27,7 @@ All diagnostic signals must be:
 - Measurable via `diagnostic_dashboard_spec_v0.md` compliant tools
 - Traceable to artifact sources
 - Independent of specific content domains
+- **Observable in OBSERVE-only runs** — all gravity signals must be demonstrable without learning active
 
 All required signals must be demonstrated *prior* to any intrinsic gravity mechanism being implemented. Diagnostic presence authorizes *discussion* of gravity, not implementation.
 
@@ -44,7 +45,7 @@ Required negative controls:
 - **No-gravity baseline** — runs where gravity should not appear
 - **Lens isolation** — gravity effects present without lens activation
 - **Traversal independence** — gravity effects not explained by traversal heuristics
-- **Learning independence** — gravity effects present in OBSERVE mode
+- **Learning independence** — learning may enable gravity, but gravity must be observable without learning active
 - **Anchor invariance** — gravity effects must persist under different anchoring strategies (goal-directed, wander, fallback), holding other conditions constant.
 
 ⸻
@@ -73,15 +74,15 @@ Gravity must be demonstrably **not** a lens effect:
 
 Gravity promotion is **forbidden** if any of the following are true:
 
-1. **Planner-like behavior** — if gravity appears to route paths or select answers
-2. **Goal-directed effects** — if gravity appears to optimize toward objectives
-3. **Hidden mechanisms** — if gravity cannot be explained via observable physics
-4. **Measurement corruption** — if gravity only appears when measurement is altered
-5. **Single-domain effects** — if gravity only appears in one content domain
-6. **Non-reproducible** — if gravity cannot be reproduced with same conditions
-7. **Lens-dependent** — if gravity disappears when lenses are disabled
-8. **Learning-dependent** — if gravity only appears during learning windows
-9. **Early parameterization** — if gravity can be tuned, weighted, or switched on/off via a parameter rather than observed as an effect, promotion is forbidden.
+1. **Tunable/parameterizable** — if gravity can be tuned, scaled, thresholded, or switched on/off via a parameter, promotion is forbidden. Gravity must be observed as an effect, not controlled as a mechanism.
+2. **Planner-like behavior** — if gravity appears to route paths or select answers
+3. **Goal-directed effects** — if gravity appears to optimize toward objectives
+4. **Hidden mechanisms** — if gravity cannot be explained via observable physics
+5. **Measurement corruption** — if gravity only appears when measurement is altered
+6. **Single-domain effects** — if gravity only appears in one content domain
+7. **Non-reproducible** — if gravity cannot be reproduced with same conditions
+8. **Lens-dependent** — if gravity disappears when lenses are disabled
+9. **Learning-dependent** — if gravity only appears during learning windows
 
 **If any disqualifier is true, do not promote.**
 
@@ -109,6 +110,8 @@ This checklist depends *normatively* on:
 - `canonical/validation/diagnostic_dashboard_spec_v0.md` — defines how to observe
 - `canonical/candidate/training/experiential_learning_curriculum_v0.md` — defines learning conditions
 - `canonical/candidate/gravity/gravity_emergence_spec.md` — defines gravity hypothesis
+
+All checks must satisfy the "What Would Count as Gravity" criteria defined in `gravity_emergence_spec.md`.
 
 This checklist is the **gate** that prevents premature promotion.
 

@@ -24,6 +24,8 @@ It depends on, and must not redefine:
 
 Any learning curriculum that conflicts with these documents is invalid.
 
+This curriculum does not define learning mechanics; it only governs when Plasticity & Learning Physics may be exercised.
+
 ⸻
 
 ## Preconditions
@@ -52,10 +54,12 @@ Before any learning curriculum may be applied:
 ## Learning Window Definition
 
 A learning window defines:
-- **What is allowed to change** — κ values, motif emergence, mass proxies
+- **What is allowed to change** — κ values, motif emergence
 - **What must remain constant** — traversal physics, cost function structure, RunMode semantics
 - **Duration** — explicit start/end conditions
 - **Scope** — which interactions/domains are included
+
+**Note:** Mass proxies may change only as a consequence of κ and motif changes. Mass proxies are derived, not written.
 
 Learning windows are **bounded experiments**, not open-ended training.
 
@@ -118,6 +122,8 @@ All claims of learning, improvement, or structural change must reference specifi
 
 Narrative descriptions without diagnostic grounding are not admissible evidence.
 
+**Explicit prohibition:** Diagnostic dashboards may not be used to decide whether to accept or reject a learning window. Dashboard outputs are observational only; all learning window decisions must be based on explicit comparison of diagnostics, not dashboard visualizations.
+
 ⸻
 
 ## Relationship to Gravity
@@ -145,7 +151,7 @@ This curriculum does not override any of the above.
 
 ⸻
 
-## Promotion Path
+## Canon Promotion Consideration
 
 This curriculum remains candidate until:
 - It has been applied successfully

@@ -40,7 +40,7 @@ Dashboards may compute and display:
 - **Heatmaps** — activation patterns, basin revisitation, frontier expansion
 - **Time series** — evolution of metrics over runs/sessions
 - **Comparisons** — before/after snapshots, A/B run comparisons
-- **Derivations** — deterministic computed metrics from artifacts (e.g., `goal_reached_pct`, `termination_reason_counts`, `distinct_region_visits`) provided each derivation is documented and traceable.
+- **Derivations** — deterministic computed metrics from artifacts (e.g., `goal_reached_pct`, `termination_reason_counts`, `distinct_region_visits`) provided each derivation is documented, traceable, and represents monotonic transformations of artifact data, not composite judgments.
 
 All aggregations must be:
 - Computable from artifacts alone
@@ -58,7 +58,9 @@ Dashboards must **not**:
 - **Recommend changes** — no suggestions for parameter adjustments
 - **Override RunModes** — no dashboard-initiated mode switches
 - **Inject feedback** — no dashboard signals feeding back into learning
-- **Rank or score runs** — no ordering, rating, or scalar "quality" measures comparing runs, sessions, or configurations.
+- **Rank or score runs** — no ordering, rating, or scalar "quality" measures comparing runs, sessions, or configurations
+- **Sort or rank by performance** — dashboards must not sort or rank runs by performance, quality, or desirability
+- **Apply threshold coloring** — dashboards must not apply color-coding or visual thresholds that imply good/bad states
 
 Dashboards are **read-only observation surfaces**.
 

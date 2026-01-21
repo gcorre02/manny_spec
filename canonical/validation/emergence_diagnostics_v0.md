@@ -236,6 +236,7 @@ Diagnostics must be run against:
 - randomized graphs
 - flattened κ distributions
 - disabled reuse scenarios
+- **Randomized traversal order** — re-running diagnostics with randomized traversal order must not produce emergence signals
 
 **Expectation:**
 - no emergence signals
@@ -269,11 +270,15 @@ Diagnostics must not:
 
 Observation precedes permission.
 
+**Diagnostic vs mechanism boundary:** Diagnostics describe structure; they do not instantiate it.
+
 ### Diagnostic vs Claim Boundary
 
 Diagnostics indicate *pressure toward* structure, not the existence of structure itself.
 
 No single diagnostic, nor any combination of diagnostics, is sufficient to declare meaning, gravity, or semantic coherence.
+
+**Explicit prohibition:** No weighted sum or composite score of diagnostics may be used as a proxy for emergence.
 
 All declarations of emergence or promotion decisions are governed separately.
 
