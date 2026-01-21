@@ -30,6 +30,7 @@ Design_Folder/
 │   │   └── training_track_v1.1.md
 │   │
 │   ├── candidate/                     # Candidate specifications (non-canonical)
+│   │   ├── README.md                  # Candidate spec guidelines (promotion requirements)
 │   │   ├── physics_candidate_index_v1.1.md  # Physics candidate index & conformance checklist
 │   │   ├── gravity/
 │   │   │   └── gravity_emergence_spec.md
