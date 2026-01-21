@@ -13,6 +13,7 @@ Design_Folder/
 │   │   ├── validation_framework.md
 │   │   ├── scale_tier_plan.md
 │   │   ├── emergence_diagnostics_v0.md
+│   │   ├── diagnostic_dashboard_spec_v0.md
 │   │   └── README.md
 │   │
 │   ├── high_level/                    # North-star references (supporting)
@@ -46,7 +47,8 @@ Design_Folder/
 │   │   │   ├── README.md
 │   │   │   └── jazz_narration_spec_v1_1.md
 │   │   └── training/
-│   │       └── README.md
+│   │       ├── README.md
+│   │       └── experiential_learning_curriculum_v0.md
 │   │
 │   ├── experiment/                    # Experiment playbooks (v0)
 │   │   ├── jazz_expermient_playbook_v0.md
@@ -82,6 +84,7 @@ Design_Folder/
 │   ├── canonical_freeze_v1.1.md
 │   ├── doc_classification.md
 │   ├── spec_integrity_checklist.md
+│   ├── gravity_promotion_checklist_v0.md
 │   └── BUS_PACKET/                   # Handoff packet
 │       ├── 00_README_START_HERE.md
 │       ├── 01_CANON_INDEX.md
