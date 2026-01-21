@@ -116,6 +116,7 @@ Because dashboards define the observation surface, changes must be slow and expl
 - Any change to aggregation definitions or chart semantics requires a version bump (e.g., `dashboard_spec_version=v0.1 → v0.2`).
 - Experiments must record the dashboard spec version used.
 - Do not backfill new aggregations into historical dashboards unless clearly marked as “computed later”.
+- **Dashboard immutability during experiments** — dashboard definitions must remain fixed during a learning or gravity experiment. No dashboard changes may occur between baseline and post-experiment measurements.
 
 ⸻
 
