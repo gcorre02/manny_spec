@@ -150,6 +150,38 @@ Such work must:
 
 ---
 
+## 9.a Candidate Diagnostic Metrics for Gravity Emergence (Non-Binding)
+
+The following metrics are **descriptive signals** that may be used to *observe* whether gravity-like behavior has emerged. These metrics are diagnostic only and must not be used as control signals, thresholds, or optimization targets.
+
+### Basin Capture Rate
+- Definition: proportion of traversals from diverse anchors that terminate within the same region or subgraph.
+- Interpretation: increasing capture rate suggests emergent attraction.
+
+### Mean Path Convergence
+- Definition: reduction in variance of path endpoints and intermediate trajectories across repeated runs.
+- Interpretation: convergence indicates shaped geometry rather than exploratory spread.
+
+### Effective Distance Compression
+- Definition: decrease in average shortest-path length to a region over time (post-learning).
+- Interpretation: reflects motif formation and curvature shaping.
+
+### Escape Energy
+- Definition: average additional cost required to traverse away from a region once entered.
+- Interpretation: higher escape energy suggests basin depth.
+
+### Motif Dominance Persistence
+- Definition: stability of motif reuse patterns across sessions and after consolidation/sleep.
+- Interpretation: persistent motifs indicate structural reinforcement consistent with gravity.
+
+### Lens Independence Check
+- Definition: confirmation that observed attraction persists when all lenses are disabled.
+- Interpretation: distinguishes intrinsic gravity from extrinsic field effects.
+
+All metrics must be computed post-hoc from artifacts. No metric listed here may influence traversal, anchoring, learning, or consolidation decisions.
+
+---
+
 ## 10. Summary Constraint
 
 > Gravity in Manny is what motion *does* in a shaped space — not something the system *uses* to decide.
