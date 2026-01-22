@@ -1,9 +1,12 @@
 # Observational Emergence Phase (v0)
 
 ## Status
-**FROZEN** — Observational Emergence Phase (v0)
+**CLEARED** — Observational Emergence Phase (v0)
 
-This phase is frozen as canonical. Manny operates in OBSERVE-only mode with isolated state. No autonomous learning, intrinsic gravity, or promotion actions are permitted.
+**Cleared via:** `observational_emergence_clearance_record_v0.md`  
+**Clearance date:** 2026-01-15
+
+This phase is frozen as canonical and has been formally cleared. Manny operated in OBSERVE-only mode with isolated state. No autonomous learning, intrinsic gravity, or promotion actions were permitted during this phase.
 
 ## Purpose
 This phase defines the period during which Manny’s manifold is *observed* for signs of emergent structure prior to any autonomous learning or intrinsic gravity.

@@ -45,3 +45,12 @@ They intentionally do not define:
 
 ## Canonical authority
 If any implementation, experiment, or future proposal contradicts the canonical documents, the documents are authoritative.
+
+⸻
+
+## Phase Clearance History
+
+**2026-01-15** — Observational Emergence Phase (v0) cleared.  
+Evidence: `canonical/validation/observational_emergence_clearance_record_v0.md`
+
+The Observational Emergence Phase has been executed, evidenced, and formally cleared. Manny now has a validated observational baseline. No learning or gravity has been authorized.
