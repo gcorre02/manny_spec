@@ -1,16 +1,17 @@
 # Learning Trial Phase — Opening Decision Record (v0)
 
-**Status:** ⬜ **PENDING** / ☑ **APPROVED** / ☑ **REJECTED**  
+**Status:** ⬜ **PENDING** (default) / ☑ **APPROVED** / ☑ **REJECTED**  
 **Date:** [YYYY-MM-DD]  
 **Decision Maker(s):** [Name(s)]
 
 ⸻
 
 ## Decision
-
 **⬜ PENDING** — Decision not yet made  
 **☑ APPROVED** — Learning Trial Phase is authorized to open  
 **☑ REJECTED** — Learning Trial Phase opening is denied
+
+Only one option may be selected. Approval requires that all required preconditions below are verified and evidenced.
 
 ⸻
 
@@ -36,6 +37,8 @@ Before a Learning Trial Phase may be opened, the following must be satisfied:
 
 **Reviewer Notes:**
 [Space for reviewer to document evidence review]
+
+Completion here refers to formal governance clearance of the Observational Emergence Phase, not merely execution of runs.
 
 ---
 
@@ -104,6 +107,8 @@ Opening a Learning Trial Phase requires explicit governance approval based on:
 
 **Completion of all preconditions does not automatically trigger opening of the Learning Trial Phase; an explicit governance decision is always required.**
 
+Governance approval must be based on evidence review, not anticipated outcomes or expected learning benefits.
+
 ⸻
 
 ## Explicit Rationale
@@ -118,6 +123,8 @@ Opening a Learning Trial Phase requires explicit governance approval based on:
 **What learning experiments are proposed?**
 
 [Reference or describe the proposed learning window plan following `experiential_learning_curriculum_v0.md`]
+
+Rationale must reference concrete evidence artifacts and governance records; speculative or aspirational justifications are insufficient.
 
 ⸻
 
@@ -156,6 +163,8 @@ It does **not** authorize:
 - Parameter tuning to influence outcomes
 - Canonical promotion of learning results
 
+- Any automatic transition to subsequent phases or promotion decisions
+
 **Opening a Learning Trial Phase authorizes experimentation only; it does not authorize claims of learning success, improvement, or emergence.**
 
 ⸻
@@ -171,7 +180,7 @@ It does **not** authorize:
 - Learning Trial Phase opening date: [YYYY-MM-DD]
 - Learning window plan reference: [path]
 - Expected duration: [if known]
-- Success criteria: [reference to curriculum]
+- Evaluation criteria: [reference to `experiential_learning_curriculum_v0.md`]
 
 **If REJECTED:**
 - Reason for rejection: [explanation]
@@ -190,6 +199,8 @@ This decision record depends on:
 
 This decision record does **not** authorize implementation by itself. It records the governance decision to open the phase.
 
+In case of conflict, the canonical specifications and clearance records take precedence over this decision record.
+
 ⸻
 
 ## Next Steps (If Approved)
@@ -202,4 +213,4 @@ This decision record does **not** authorize implementation by itself. It records
 
 ⸻
 
-> **Principle:** Opening a Learning Trial Phase is a governance act that authorizes controlled experimentation, not success. Learning must be observed and measured, not assumed.
+> **Principle:** Opening a Learning Trial Phase is a governance act that authorizes controlled experimentation only. Learning, emergence, or improvement must be demonstrated empirically and evaluated separately.

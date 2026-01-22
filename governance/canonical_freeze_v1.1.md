@@ -54,3 +54,13 @@ If any implementation, experiment, or future proposal contradicts the canonical 
 Evidence: `canonical/validation/observational_emergence_clearance_record_v0.md`
 
 The Observational Emergence Phase has been executed, evidenced, and formally cleared. Manny now has a validated observational baseline. No learning or gravity has been authorized.
+
+⸻
+
+## Learning Trial Phase Governance
+
+**2026-01-15** — Learning Trial Phase opening decision record created.  
+Decision record: `governance/learning_trial_phase_opening_decision_v0.md`  
+Status: **PENDING** (not yet approved)
+
+The Learning Trial Phase opening decision record is frozen as a governance document. It defines the formal process for authorizing the transition from Observational Emergence Phase to Learning Trial Phase. Approval requires evidence review and explicit governance decision; it does not authorize learning by itself.
