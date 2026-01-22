@@ -87,15 +87,86 @@ Purpose: ensure diagnostics do not fire spuriously.
 
 No promotion or implementation decisions may be made at this stage.
 
-## Exit Criteria
 
-This phase may be considered complete when:
-- Baseline diagnostics have been captured and replayed
-- Perturbation effects are understood and documented
-- Negative controls are validated
-- Diagnostic behavior is sufficiently characterized to inform learning experiments
+## Phase Readiness and Clearance
 
-Completion of this phase does **not** imply that emergence or gravity exists.
+This section records the concrete conditions under which the Observational Emergence Phase is considered **well-posed**, **validly executed**, and **eligible for closure**. It is intended to prevent ambiguity about what constitutes completion.
+
+### What Is Already in Place (Entry Conditions)
+
+The following prerequisites are satisfied at the time of freezing this phase:
+
+- Canonical physics definitions (routing, traversal, lenses, plasticity, motifs) are frozen at v1.1
+- OBSERVE-only execution mode with write barriers is implemented and enforced
+- Jazz protocol is implemented as an observational instrument
+- Emergence diagnostics vocabulary is defined (`emergence_diagnostics_v0.md`)
+- Diagnostic dashboard constraints are defined (`diagnostic_dashboard_spec_v0.md`)
+- Gravity discussion constraints are defined (`gravity_emergence_spec.md`)
+- No learning, intrinsic gravity, or promotion mechanisms are active
+
+These conditions ensure that all observations made during this phase are attributable solely to existing physics.
+
+---
+
+### What Must Be Demonstrated During the Phase
+
+To validly execute this phase, the following must be produced and recorded:
+
+1. **Baseline Observations**
+   - At least one complete set of Jazz runs with learning disabled
+   - Multiple seeds under identical configurations
+   - Diagnostics computed and recorded for each run
+
+2. **Perturbation Responses**
+   - Re-runs under novelty and directional field lenses
+   - Re-runs under anchoring strategy variations
+   - Diagnostics compared against baseline without thresholding
+
+3. **Negative Control Validations**
+   - Diagnostics under randomized traversal order
+   - Diagnostics with curvature influence flattened or disabled
+   - Confirmation that emergence signals do not appear spuriously
+
+4. **Reproducibility Evidence**
+   - Successful replay of selected runs
+   - Stable diagnostics under identical conditions
+
+No interpretation, naming, or promotion may occur during this step.
+
+---
+
+### What Clears the Phase (Eligibility for Transition)
+
+The Observational Emergence Phase may be declared **complete** when all of the following are true:
+
+- Baseline, perturbation, and negative control runs have been executed and archived
+- Diagnostic behavior is understood well enough to distinguish:
+  - intrinsic structural signals
+  - lens-induced artifacts
+  - random or spurious effects
+- Observations are sufficiently characterized to design a learning experiment without redefining diagnostics
+- A governance review confirms that:
+  - OBSERVE-only discipline was maintained
+  - No forbidden mechanisms were exercised
+  - Results are internally consistent and replayable
+
+Completion requires at least one documented summary of observed diagnostic behaviors and open questions, recorded without interpretation.
+
+Completion authorizes **consideration** of the Learning Trial Phase but does not mandate it.
+
+---
+
+### Explicit Non-Criteria
+
+The following do **not** clear this phase:
+
+- Visual intuition that the manifold "looks structured"
+- Single-run or single-seed observations
+- Apparent clustering without negative controls
+- Diagnostic values exceeding informal or intuitive thresholds
+- Any claim of meaning, intelligence, or gravity
+
+---
 
 ## Next Phase
 
