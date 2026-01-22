@@ -1,6 +1,6 @@
 # Opening the Learning Trial Phase — Conditions and Rationale
 
-**Status:** Prepared / Not Yet Executed  
+**Status:** Prepared / Not Yet Executed / Non-authorizing  
 **Date:** 2026-01-15  
 **Purpose:** Define conditions and rationale required to transition from Observational Emergence Phase to Learning Trial Phase
 
@@ -24,13 +24,14 @@ Before a Learning Trial Phase may be opened, the following must be satisfied:
 - Perturbation effects understood and documented
 - Negative controls validated (no spurious emergence signals)
 - Diagnostic behavior sufficiently characterized to inform learning experiments
+- Diagnostic review conducted without thresholds, pass/fail labels, or rankings
 
 **Evidence required:** Diagnostic reports demonstrating baseline stability, perturbation responses, and negative control validation.
 
 ### 2. Canonical Stability
 
 - Foundations, Design, and Architecture v1.1 remain frozen
-- No canonical changes during learning experiments
+- No canonical changes have occurred since the Observational Emergence Phase was frozen
 - Validation framework operational
 
 **Evidence required:** Confirmation that canonical freeze v1.1 remains in effect.
@@ -40,6 +41,7 @@ Before a Learning Trial Phase may be opened, the following must be satisfied:
 - OBSERVE/LEARN/STAGE boundaries enforced
 - Write barriers verified
 - At least one OBSERVE-only run replayed successfully with identical results
+- Negative enforcement verified: forbidden writes in OBSERVE mode are rejected
 
 **Evidence required:** Replay validation reports demonstrating RunMode isolation.
 
@@ -47,9 +49,12 @@ Before a Learning Trial Phase may be opened, the following must be satisfied:
 
 - `emergence_diagnostics_v0.md` implemented and producing outputs
 - `diagnostic_dashboard_spec_v0.md` implemented and compliant
-- Dashboard immutability during experiments guaranteed
+- Dashboard immutability during experiments is enforced
 
 **Evidence required:** Operational diagnostic tools producing reproducible outputs.
+
+**Note on Phase Status**  
+At the time of writing, the Observational Emergence Phase is frozen at the specification level but has not yet been cleared in implementation. Detailed implementation gaps and execution status are recorded in `canonical/validation/observation_emergence_phase_v0.md`.
 
 ⸻
 
@@ -79,6 +84,8 @@ It does **not** authorize:
 - Parameter tuning to influence outcomes
 - Canonical promotion of learning results
 
+Opening a Learning Trial Phase authorizes experimentation only; it does not authorize claims of learning success, improvement, or emergence.
+
 ⸻
 
 ## Required Documentation for Approval
@@ -90,6 +97,7 @@ To approve opening a Learning Trial Phase, governance must receive:
 3. **Infrastructure Readiness Statement** — confirmation that diagnostic tools are operational
 4. **Explicit Rationale** — documented reason for transition (e.g., "sufficient baseline established to enable controlled learning experiments")
 5. **Learning Window Plan** — proposed learning experiments following `experiential_learning_curriculum_v0.md`
+6. Concrete run identifiers and artifact paths for all evidence dossiers
 
 ⸻
 
