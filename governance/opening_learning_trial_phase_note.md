@@ -4,6 +4,8 @@
 **Date:** 2026-01-15  
 **Purpose:** Define conditions and rationale required to transition from Observational Emergence Phase to Learning Trial Phase
 
+This document governs authorization only; it does not define experimental design, learning mechanics, or success criteria.
+
 ⸻
 
 ## Context
@@ -25,6 +27,7 @@ Before a Learning Trial Phase may be opened, the following must be satisfied:
 - Negative controls validated (no spurious emergence signals)
 - Diagnostic behavior sufficiently characterized to inform learning experiments
 - Diagnostic review conducted without thresholds, pass/fail labels, or rankings
+- If diagnostic sensitivity has been validated via a bounded calibration probe, results may be included as supporting evidence but do not substitute for completion of the Observational Emergence Phase.
 
 **Evidence required:** Diagnostic reports demonstrating baseline stability, perturbation responses, and negative control validation.
 
@@ -66,6 +69,8 @@ Opening a Learning Trial Phase requires explicit governance approval based on:
 2. **No premature emergence claims** — no gravity or learning effects declared during observation
 3. **Infrastructure readiness** — all diagnostic and validation tools operational
 4. **Explicit rationale** — documented reason for transition (not "we want to try learning")
+
+Completion of all preconditions does not automatically trigger opening of the Learning Trial Phase; an explicit governance decision is always required.
 
 ⸻
 
