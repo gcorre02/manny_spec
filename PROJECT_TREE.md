@@ -9,11 +9,16 @@ Design_Folder/
 │   ├── architecture_v1.1.md           # Module/flow spec, motion law, run-modes
 │   ├── CANONICAL_INDEX.md             # Authoritative list of canonical docs
 │   │
+│   ├── governance/                    # Canonical governance gates
+│   │   └── gravity_promotion_checklist_v0.md
+│   │
 │   ├── validation/                    # Validation framework
 │   │   ├── validation_framework.md
-│   │   ├── scale_tier_plan.md
+│   │   ├── observation_emergence_phase_v0.md
+│   │   ├── observational_emergence_clearance_record_v0.md
 │   │   ├── emergence_diagnostics_v0.md
 │   │   ├── diagnostic_dashboard_spec_v0.md
+│   │   ├── scale_tier_plan.md
 │   │   └── README.md
 │   │
 │   ├── high_level/                    # North-star references (supporting)
@@ -84,7 +89,8 @@ Design_Folder/
 │   ├── canonical_freeze_v1.1.md
 │   ├── doc_classification.md
 │   ├── spec_integrity_checklist.md
-│   ├── gravity_promotion_checklist_v0.md
+│   ├── opening_learning_trial_phase_note.md
+│   ├── learning_trial_phase_opening_decision_v0.md
 │   └── BUS_PACKET/                   # Handoff packet
 │       ├── 00_README_START_HERE.md
 │       ├── 01_CANON_INDEX.md
@@ -114,8 +120,13 @@ Design_Folder/
 │   └── exports/
 │
 ├── future/                            # Future work (non-canonical)
+│   ├── README.md
+│   ├── deferred_future_work_register.md
+│   ├── future_research_map.md
 │   ├── future_research_map(cannonical).md
+│   ├── human_behavior_and_agi.md
 │   ├── manny_domain_strategy_product_governance_framework.md
+│   ├── training_manny_living.md
 │   ├── candidate/                    # Candidate future work
 │   │   ├── bus_package_and_agi_approach.md
 │   │   ├── deferred_future_work_register.md
@@ -131,6 +142,8 @@ Design_Folder/
 │
 ├── ongoing_thoughts.md                # Personal ideation notepad
 ├── README.md                          # Repository overview
+├── AGENTS.md                          # AI assistant guide (Codex/Cursor)
+├── .cursorrules                       # Cursor assistant rules
 ├── CHANGELOG.md
 ├── CONTRIBUTORS.md
 ├── LICENSE

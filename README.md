@@ -8,12 +8,14 @@ This repository is the documentation source of truth for Manny Manifolds. There 
   - `design_document_v1.1.md` — contract, requirements, gates, primitive/compression/perception contracts.
   - `architecture_v1.1.md` — system shape, modules, run-modes, motion law, ingest contract.
   - `validation/` — validation framework (hypothesis-driven validation process and report requirements).
+  - `governance/` — canonical governance gates (e.g., gravity promotion checklist).
   - `high_level/` — north-star references (Unified Manifold PDFs + gap analysis) and `background_refs/` (supporting surveys/frictions/positioning).
   - `CANONICAL_INDEX.md` — authoritative list of canonical docs and precedence.
   - `README.md` — layout guide; archive pointers (v1.0 snapshots + candidate materials used for 1.1).
 - `governance/` — canonical freeze and change rules
   - `canonical_freeze_v1.0.md` (historical)
   - `canonical_freeze_v1.1.md` (current)
+- `AGENTS.md`, `.cursorrules` — AI assistant guidance (Codex/Cursor)
 - `future/` — non-canonical ideas compatible with Canonical v1.1
   - `deferred_future_work_register.md`
   - `human_behavior_and_agi.md`

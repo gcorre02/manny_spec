@@ -298,8 +298,8 @@ No such feature may proceed without positive diagnostic evidence.
 ## Related Specifications
 
 - `diagnostic_dashboard_spec_v0.md` — defines how diagnostics may be visualized
-- `gravity_emergence_spec.md` — constrains how gravity may be discussed
-- `gravity_promotion_checklist_v0.md` — defines when gravity may be acknowledged
+- `canonical/candidate/gravity/gravity_emergence_spec.md` — constrains how gravity may be discussed
+- `canonical/governance/gravity_promotion_checklist_v0.md` — defines when gravity may be acknowledged
 
 ---
 

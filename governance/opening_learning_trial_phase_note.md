@@ -57,7 +57,7 @@ Before a Learning Trial Phase may be opened, the following must be satisfied:
 **Evidence required:** Operational diagnostic tools producing reproducible outputs.
 
 **Note on Phase Status**  
-At the time of writing, the Observational Emergence Phase is frozen at the specification level but has not yet been cleared in implementation. Detailed implementation gaps and execution status are recorded in `canonical/validation/observation_emergence_phase_v0.md`.
+As of 2026-01-15, the Observational Emergence Phase is formally **CLEARED** (see `canonical/validation/observational_emergence_clearance_record_v0.md`). The Learning Trial Phase remains closed until explicitly approved in `governance/learning_trial_phase_opening_decision_v0.md`.
 
 ⸻
 
@@ -78,7 +78,7 @@ Completion of all preconditions does not automatically trigger opening of the Le
 
 If approved, a Learning Trial Phase would permit:
 
-- Controlled learning windows as defined in `experiential_learning_curriculum_v0.md`
+- Controlled learning windows as defined in `canonical/candidate/training/experiential_learning_curriculum_v0.md`
 - LEARN-mode interactions with explicit boundaries
 - Before/after diagnostic comparisons
 - Hypothesis-constrained learning experiments
@@ -101,7 +101,7 @@ To approve opening a Learning Trial Phase, governance must receive:
 2. **Baseline Diagnostic Summary** — characterization of pre-learning manifold state
 3. **Infrastructure Readiness Statement** — confirmation that diagnostic tools are operational
 4. **Explicit Rationale** — documented reason for transition (e.g., "sufficient baseline established to enable controlled learning experiments")
-5. **Learning Window Plan** — proposed learning experiments following `experiential_learning_curriculum_v0.md`
+5. **Learning Window Plan** — proposed learning experiments following `canonical/candidate/training/experiential_learning_curriculum_v0.md`
 6. Concrete run identifiers and artifact paths for all evidence dossiers
 
 ⸻
@@ -121,7 +121,7 @@ This note does **not** authorize implementation. It only prepares the governance
 
 **Status:** Not yet executed  
 **Decision:** Pending  
-**Rationale:** Awaiting completion of Observational Emergence Phase
+**Rationale:** Awaiting governance approval and evidence dossier review
 
 When a decision is made, this section will be updated with:
 - Approval/rejection decision

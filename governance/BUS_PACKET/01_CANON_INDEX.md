@@ -8,7 +8,9 @@
 | `canonical/validation/validation_framework.md` | Hypothesis-driven validation process, packs, report schema |
 | `canonical/validation/observation_emergence_phase_v0.md` | CLEARED phase definition: OBSERVE-only observational emergence period (cleared 2026-01-15) |
 | `canonical/validation/observational_emergence_clearance_record_v0.md` | Governance clearance record for Observational Emergence Phase |
+| `canonical/governance/gravity_promotion_checklist_v0.md` | Governance gate for when gravity may be discussed/promoted |
 | `governance/learning_trial_phase_opening_decision_v0.md` | FROZEN governance decision record for opening Learning Trial Phase (status: PENDING) |
+| `governance/opening_learning_trial_phase_note.md` | Non-authorizing preconditions and rationale note for opening Learning Trial Phase |
 | `canonical/high_level/` | North-star refs (Unified Manifold PDFs, gap analysis) |
 | `canonical/high_level/background_refs/` | Surveys, frictions, positioning (reference only) |
 | `future/future_research_map.md` | Non-canonical research tracker |

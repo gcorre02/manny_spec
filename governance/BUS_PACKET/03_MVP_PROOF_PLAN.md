@@ -1,5 +1,7 @@
 # MVP Proof Plan
 
+Note: this repository is **documentation-only**. The `mm validate` command, `runs/` outputs, and `packs/` paths referenced here are expected to exist in the runtime/implementation repository.
+
 Definition of “Manny works” (v1.1):
 - **Explainability:** path coverage = 1.0; `/why` fidelity = 1.0 (Gate A).
 - **Convergence:** ≥20% mean path-length reduction on repeat tasks (local/directional) (Gate B).

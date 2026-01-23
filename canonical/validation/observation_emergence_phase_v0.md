@@ -39,8 +39,8 @@ This phase depends normatively on the following specifications:
 
 - `emergence_diagnostics_v0.md` — authoritative vocabulary for observing emergent structure
 - `diagnostic_dashboard_spec_v0.md` — constraints on visualization and aggregation
-- `jazz_protocol.md` — observational interaction protocol
-- `gravity_emergence_spec.md` — constraints on discussing gravity prior to promotion
+- `canonical/high_level/runtime_protocols/observability/jazz_protocol.md` — observational interaction protocol
+- `canonical/candidate/gravity/gravity_emergence_spec.md` — constraints on discussing gravity prior to promotion
 
 No other documents may redefine emergence signals during this phase.
 
@@ -104,7 +104,7 @@ The following prerequisites are satisfied at the time of freezing this phase:
 - Jazz protocol is implemented as an observational instrument
 - Emergence diagnostics vocabulary is defined (`emergence_diagnostics_v0.md`)
 - Diagnostic dashboard constraints are defined (`diagnostic_dashboard_spec_v0.md`)
-- Gravity discussion constraints are defined (`gravity_emergence_spec.md`)
+- Gravity discussion constraints are defined (`canonical/candidate/gravity/gravity_emergence_spec.md`)
 - No learning, intrinsic gravity, or promotion mechanisms are active
 
 These conditions ensure that all observations made during this phase are attributable solely to existing physics.
@@ -175,8 +175,8 @@ The following do **not** clear this phase:
 
 Opening of a **Learning Trial Phase** is governed by:
 
-- `experiential_learning_curriculum_v0.md`
-- `gravity_promotion_checklist_v0.md`
+- `canonical/candidate/training/experiential_learning_curriculum_v0.md`
+- `canonical/governance/gravity_promotion_checklist_v0.md`
 
 Transition to the next phase requires an explicit governance decision and recorded rationale.
 

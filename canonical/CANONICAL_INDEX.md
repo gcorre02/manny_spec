@@ -8,5 +8,6 @@ Precedence: Foundations → Design → Architecture → Validation. High-level r
 - `validation/validation_framework.md` — hypothesis-driven validation process, packs, report schema.
 - `validation/observation_emergence_phase_v0.md` — CLEARED phase definition for observational emergence period (OBSERVE-only, no learning/gravity).
   - Clearance record: `validation/observational_emergence_clearance_record_v0.md`
+- Governance gates: `governance/gravity_promotion_checklist_v0.md` — when gravity may be discussed/promoted (governance act, not physics).
 - High-level references: `high_level/` (north-star PDFs, gap analysis, runtime protocol, training track); `background_refs/` (reference-only).
 - Archive: `archive/` (v1.0 snapshots, candidate_v1.1 originals) — historical only.

@@ -1,0 +1,20 @@
+# Manny Manifolds (manny_design) — Cursor Rules
+
+This repository is **documentation-only** for Manny Manifolds; runtime code lives elsewhere.
+
+## Where to start
+- `README.md`
+- `canonical/CANONICAL_INDEX.md`
+- `governance/canonical_freeze_v1.1.md`
+- `governance/BUS_PACKET/00_README_START_HERE.md`
+
+## Document precedence
+- **Canonical (frozen):** `canonical/` (v1.1) + `canonical/CANONICAL_INDEX.md` + `governance/canonical_freeze_v1.1.md`
+- **Governance process:** `governance/` (decision records, freezes, integrity checklists)
+- **Non-canonical:** `implementation/`, `future/`, `research/`, `archive/`, `ongoing_thoughts.md`
+
+## Editing rules
+- Treat Canonical v1.1 as the source of truth; avoid semantic changes without creating a new version (v1.2+).
+- Prefer small, surgical edits; preserve document tone/formatting (including `⸻` separators).
+- Keep cross-document paths accurate; update `PROJECT_TREE.md` and relevant indices when files move or new docs are added.
+- Don’t invent or imply runnable commands/code in this repo; if mentioning `mm ...` commands, note they belong to the runtime repo.
